@@ -293,7 +293,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📞 Support
 
 For questions or support:
-- **Email**: tuhinkumarsingharoy2001@gmail.com
 - **LinkedIn**: [linkedin.com/in/tuhininaiml](https://linkedin.com/in/tuhininaiml)
 - **GitHub**: [github.com/Tuhin108](https://github.com/Tuhin108)
 
