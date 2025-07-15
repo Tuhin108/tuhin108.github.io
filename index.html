@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuhin Kumar Singha Roy - AI & ML Engineer</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    
+    <!-- BI Dashboard SDKs -->
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.23.1/dist/powerbi.min.js"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Initializing AI Systems...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="glassmorphic-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1 id="header-name">Loading...</h1>
+                <p id="header-tagline">Loading...</p>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div id="particles-js"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 id="hero-name">Loading...</h1>
+                    <div class="typewriter-container">
+                        <span id="typed-text"></span>
+                    </div>
+                    <p id="hero-description">Loading...</p>
+                    <div class="hero-buttons">
+                        <button class="glassmorphic-btn primary" onclick="scrollToSection('projects')">
+                            <i class="fas fa-code"></i>
+                            View Projects
+                        </button>
+                        <a href="https://drive.google.com/file/d/1objr30pcbPBQNJJv8giIVcKbPRv50p_2/" target="_blank" rel="noopener" class="glassmorphic-btn secondary">
+                            <i class="fas fa-file-alt"></i>
+                            View Resume
+                        </a>
+                        <button class="glassmorphic-btn secondary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="code-title">ai_engineer.py</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code><span class="keyword">import</span> <span class="module">tensorflow</span> <span class="keyword">as</span> <span class="variable">tf</span>
+<span class="keyword">from</span> <span class="module">sklearn</span> <span class="keyword">import</span> <span class="function">model_selection</span>
+
+<span class="keyword">class</span> <span class="class">AIEngineer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="variable">self</span>):
+        <span class="variable">self</span>.<span class="property">skills</span> = [<span class="string">'Python'</span>, <span class="string">'ML'</span>, <span class="string">'DL'</span>]
+        <span class="variable">self</span>.<span class="property">passion</span> = <span class="string">'AI Innovation'</span>
+    
+    <span class="keyword">def</span> <span class="function">solve_problems</span>(<span class="variable">self</span>):
+        <span class="keyword">return</span> <span class="string">'Intelligent Solutions'</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Skills Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About & Skills</h2>
+                    <p class="section-subtitle">Passionate about AI/ML innovation and data-driven solutions</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p id="about-description">Loading...</p>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <h3 id="projects-count">0</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 id="skills-count">0</h3>
+                                <p>Technical Skills</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3> 2+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-container">
+                        <h3>Technical Expertise</h3>
+                        <div id="skills-grid" class="skills-grid">
+                            <!-- Skills will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education & Certifications</h2>
+                    <p class="section-subtitle">Academic background and professional certifications</p>
+                </div>
+                <div class="education-content">
+                    <div class="education-timeline">
+                        <div id="education-list" class="timeline-list">
+                            <!-- Education will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="certifications-grid">
+                        <h3>Recent Certifications</h3>
+                        <div id="certifications-grid" class="certs-grid">
+                            <!-- Certifications will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">Internships and work experience in AI/ML</p>
+                </div>
+                <div id="experience-timeline" class="experience-timeline">
+                    <!-- Experience will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">AI/ML solutions that make a difference</p>
+                </div>
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Achievements & Leadership</h2>
+                    <p class="section-subtitle">Recognition and leadership experiences</p>
+                </div>
+                <div id="achievements-grid" class="achievements-grid">
+                    <!-- Achievements will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Analytics Dashboard</h2>
+                    <p class="section-subtitle">Interactive data visualization and insights</p>
+                </div>
+                <div class="dashboard-container">
+                    <div class="dashboard-controls">
+                        <button class="glassmorphic-btn" onclick="refreshDashboard()">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh
+                        </button>
+                        <button class="glassmorphic-btn" onclick="exportDashboard()">
+                            <i class="fas fa-download"></i>
+                            Export
+                        </button>
+                    </div>
+                    <div id="tableau-dashboard" class="dashboard-embed">
+                        <!-- Tableau dashboard will be embedded here -->
+                        <div class="dashboard-placeholder">
+                            <i class="fas fa-chart-bar"></i>
+                            <h3>Dashboard Loading...</h3>
+                            <p>Connecting to data visualization platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's collaborate on AI/ML projects</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p id="contact-email">Loading...</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p id="contact-phone">Loading...</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a id="contact-linkedin" href="#" target="_blank">Loading...</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a id="contact-github" href="#" target="_blank">Loading...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="glassmorphic-btn primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div id="chatbot-toggle" class="chatbot-toggle">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div id="chatbot-panel" class="chatbot-panel">
+            <div class="chatbot-header">
+                <h3>AI Assistant</h3>
+                <button id="chatbot-close" class="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chatbot-categories" class="chatbot-categories">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+            <div id="chatbot-questions" class="chatbot-questions" style="display: none;">
+                <div class="questions-header">
+                    <button id="back-to-categories" class="back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Categories
+                    </button>
+                    <h4 id="current-category">Category</h4>
+                </div>
+                <div id="questions-list" class="questions-list">
+                    <!-- Questions will be populated by JavaScript -->
+                </div>
+            </div>
+            <div id="chatbot-answer" class="chatbot-answer" style="display: none;">
+                <div class="answer-header">
+                    <button id="back-to-questions" class="back-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Questions
+                    </button>
+                    <h4 id="current-question">Question</h4>
+                </div>
+                <div id="answer-content" class="answer-content">
+                    <!-- Answer will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

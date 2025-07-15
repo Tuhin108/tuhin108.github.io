@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "name": "About Me",
+      "icon": "fas fa-user",
+      "questions": [
+        {
+          "question": "Who are you?",
+          "answer": "I'm Tuhin Kumar Singha Roy, a passionate AI & ML Engineer currently pursuing B.Tech in Computer Science and Engineering with specialization in AI and ML from MCKV Institute of Engineering. I have hands-on experience in developing AI-powered solutions, machine learning models, and data-driven applications."
+        },
+        {
+          "question": "What's your educational background?",
+          "answer": "I'm currently pursuing B.Tech in Computer Science and Engineering (AI and ML) from MCKV Institute of Engineering, Liluah, West Bengal (2022-2026) with a CGPA of 8.07. I have a strong foundation in AI, ML, and software development."
+        },
+        {
+          "question": "What are your interests?",
+          "answer": "I'm passionate about AI/ML innovation, data science, and building intelligent solutions. Outside of work, I enjoy playing football and chess, conducting research, watching documentaries, and creating educational tech content on my YouTube channel 'Tuhin in AIML'."
+        }
+      ]
+    },
+    {
+      "name": "Technical Skills",
+      "icon": "fas fa-code",
+      "questions": [
+        {
+          "question": "What programming languages do you know?",
+          "answer": "I'm proficient in **Python** (95%), **JavaScript** (70%), **Java**, **C**, and **SQL**. Python is my primary language for AI/ML development, while I use JavaScript for web development and SQL for database operations."
+        },
+        {
+          "question": "What AI/ML technologies do you work with?",
+          "answer": "I specialize in **Machine Learning** (90%), **Deep Learning** (85%), **TensorFlow** (85%), **Natural Language Processing** (80%), and **Computer Vision** (80%). I also work with scikit-learn, Keras, OpenCV, and various ML algorithms."
+        },
+        {
+          "question": "What cloud and deployment technologies do you use?",
+          "answer": "I have experience with **AWS** (75%), **Docker** (65%), **Flask** (85%), and **Streamlit** (90%). I can deploy ML models to cloud platforms and create interactive web applications for AI solutions."
+        },
+        {
+          "question": "Show me all your technical skills",
+          "answer": "Here's my complete technical skill set:\n\n**Programming Languages:**\n• Python - 95%\n• JavaScript - 70%\n• Java, C, SQL\n\n**AI/ML:**\n• Machine Learning - 90%\n• Deep Learning - 85%\n• NLP - 80%\n• Computer Vision - 80%\n\n**Frameworks & Tools:**\n• TensorFlow - 85%\n• Flask - 85%\n• Streamlit - 90%\n• AWS - 75%\n• Docker - 65%"
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "icon": "fas fa-project-diagram",
+      "questions": [
+        {
+          "question": "What are your featured projects?",
+          "answer": "Here are my key projects:\n\n**1. AI-Powered Email Spam Classifier**\n• Built using Google's Gemini LLM API\n• Interactive web app with Streamlit\n• JSON-based AI output with confidence scoring\n\n**2. InterviewGPT – AI Mock Interview**\n• Role-based interview question generation\n• Real-time feedback using Gemini LLM\n• Voice input and result visualization\n\n**3. Plant Disease Detection System**\n• CNN model for 38 plant disease classes\n• 85%+ accuracy on 63,000+ images\n• Deployed with Streamlit\n\n**4. Crop & Fertilizer Recommendation**\n• Random Forest ML pipelines\n• 90% accuracy on 1000+ records\n• Flask deployment for smart farming"
+        },
+        {
+          "question": "Tell me about your AI/ML projects",
+          "answer": "My AI/ML projects focus on practical applications:\n\n**Email Spam Classifier:** Uses Gemini LLM for intelligent email classification with structured prompts and few-shot learning.\n\n**Plant Disease Detection:** CNN-based system processing 63,000+ plant images to classify 38 disease types with 85%+ accuracy.\n\n**Crop Recommendation System:** ML pipeline using Random Forest to help farmers select optimal crops and fertilizers based on soil and weather data.\n\n**AI Chatbot:** Interactive assistant using Mistral API with NLP techniques for context-aware conversations."
+        },
+        {
+          "question": "What web development projects have you built?",
+          "answer": "My web development projects include:\n\n**InterviewGPT:** Flask-based web application with HTML/CSS/JavaScript frontend for AI-powered mock interviews.\n\n**Farmer-Friend:** Streamlit application providing AI-powered agricultural recommendations.\n\n**2D/3D Drone Irrigation Simulation:** JavaScript-based simulation system for analyzing drone irrigation patterns in agricultural settings.\n\nAll projects feature responsive design, real-time interactions, and seamless AI integration."
+        },
+        {
+          "question": "Show me projects with specific technologies",
+          "answer": "**Python Projects:** Email Spam Classifier, Plant Disease Detection, Crop Recommendation, AI Chatbot, Farmer-Friend\n\n**Machine Learning:** Plant Disease Detection (CNN), Crop Recommendation (Random Forest), Email Classification (LLM)\n\n**Web Development:** InterviewGPT (Flask), Farmer-Friend (Streamlit), Drone Simulation (JavaScript)\n\n**AI/LLM:** Email Spam Classifier (Gemini), InterviewGPT (Gemini), AI Chatbot (Mistral), Farmer-Friend (Mistral)"
+        }
+      ]
+    },
+    {
+      "name": "Experience",
+      "icon": "fas fa-briefcase",
+      "questions": [
+        {
+          "question": "What's your work experience?",
+          "answer": "**Current Position:**\n**Hive Tech - AI/ML Intern** (Jan 2025 - Present)\n• Developing and training diverse AI, ML, and Deep Learning models including LLMs\n• Contributing to early-stage AI solution development\n• Gaining practical experience deploying models on AWS\n• Maintaining documentation and building prototypes\n\n**Previous Experience:**\n**Edunet Foundation - AI/ML Intern** (Dec 2024 - Feb 2025)\n• Developed CNN for plant disease detection (38 classes, 85%+ accuracy)\n• Processed 63,000+ images for training and evaluation\n• Built & deployed ML pipelines for crop/fertilizer recommendation (90% accuracy)\n• Trained models on 1000+ agricultural records"
+        },
+        {
+          "question": "Tell me about your internships",
+          "answer": "I have completed two significant AI/ML internships:\n\n**Hive Tech (Current):** Working on diverse AI models including LLMs, gaining hands-on experience with AWS deployment, and contributing to AI solution development from the ground up.\n\n**Edunet Foundation:** Focused on agricultural AI applications, developed a CNN-based plant disease detection system and ML-powered crop recommendation systems. Successfully processed large datasets and achieved high accuracy rates in production deployments."
+        },
+        {
+          "question": "What kind of AI models have you worked with?",
+          "answer": "I have hands-on experience with various AI model types:\n\n**Deep Learning Models:**\n• Convolutional Neural Networks (CNNs) for image classification\n• Neural networks for pattern recognition\n\n**Machine Learning Models:**\n• Random Forest for agricultural predictions\n• Classification algorithms for spam detection\n\n**Large Language Models:**\n• Google's Gemini LLM for text processing\n• Mistral API for conversational AI\n• Prompt engineering and few-shot learning\n\n**Computer Vision:**\n• Image preprocessing and augmentation\n• Multi-class classification systems"
+        }
+      ]
+    },
+    {
+      "name": "Education & Certifications",
+      "icon": "fas fa-graduation-cap",
+      "questions": [
+        {
+          "question": "What's your educational background?",
+          "answer": "**Current Education:**\n**MCKV Institute of Engineering**\nB.Tech in Computer Science and Engineering (AI and ML)\n📅 2022-2026 | 🎯 CGPA: 8.07\n📍 Liluah, West Bengal\n\nSpecializing in Artificial Intelligence and Machine Learning with strong foundation in algorithms, data structures, and advanced AI techniques."
+        },
+        {
+          "question": "What certifications do you have?",
+          "answer": "**Recent Certifications:**\n\n🏆 **Introduction to Business Intelligence** - Infosys Springboard (June 2025)\nSkills: BI, Data Warehouse, OLAP, OLTP\n\n🏆 **Introduction to Artificial Intelligence** - Infosys Springboard (June 2025)\nSkills: AI, Supervised Learning, Unsupervised Learning\n\n🏆 **Introduction to Natural Language Processing** - Infosys Springboard (June 2025)\nSkills: NLP, Deep Learning\n\n🏆 **Getting Started with Artificial Intelligence** - IBM (March 2025)\nSkills: AI Applications, Generative AI, Prompt Engineering"
+        },
+        {
+          "question": "What specific skills did you learn from certifications?",
+          "answer": "My certifications have equipped me with:\n\n**Business Intelligence:** Data warehousing concepts, OLAP vs OLTP systems, BI dashboard creation, and data visualization techniques.\n\n**AI Fundamentals:** Supervised and unsupervised learning algorithms, model evaluation, and AI application development.\n\n**NLP Expertise:** Text processing, sentiment analysis, language models, and deep learning for NLP tasks.\n\n**Generative AI:** Prompt engineering techniques, AI application development, and practical implementation of generative models."
+        }
+      ]
+    },
+    {
+      "name": "Achievements & Leadership",
+      "icon": "fas fa-trophy",
+      "questions": [
+        {
+          "question": "What are your major achievements?",
+          "answer": "🏆 **SIH2024 Team Leader**\nLed a successful team that won the College Internal Hackathon. Developed an application that increased sales process efficiency for farmers.\n\n🥈 **Brain Verse 2025 - 2nd Place**\nSecured 2nd Place in Brainverse Competition (Intra-College) as Team Leader, demonstrating problem-solving and leadership skills.\n\n⚽ **Intra-College Football Champion**\nWon 2025 Intra-College Football Tournament as team member, showing teamwork and athletic abilities."
+        },
+        {
+          "question": "Tell me about your leadership experience",
+          "answer": "**Team Leadership:**\n• **SIH2024 Team Leader:** Successfully directed a team through the Smart India Hackathon, focusing on agricultural technology solutions\n• **Brain Verse 2025:** Led team to 2nd place in competitive programming/problem-solving competition\n• Demonstrated ability to coordinate technical projects and motivate team members\n\n**Project Management:**\n• Managed end-to-end development of multiple AI/ML projects\n• Coordinated between different stakeholders in internship projects\n• Experience in agile development and iterative improvement processes"
+        },
+        {
+          "question": "What extracurricular activities are you involved in?",
+          "answer": "**Sports & Recreation:**\n⚽ Active football player - College tournament champion\n♟️ Chess enthusiast - Strategic thinking and problem-solving\n\n**Content Creation:**\n📺 YouTube Channel: 'Tuhin in AIML' - Creating educational content on AI/ML and automation\n📚 Research and documentation of AI/ML concepts\n\n**Technical Communities:**\n💻 Participating in hackathons and coding competitions\n🤝 Mentoring junior students in AI/ML concepts\n📖 Continuous learning through online courses and certifications"
+        }
+      ]
+    },
+    {
+      "name": "Contact & Availability",
+      "icon": "fas fa-envelope",
+      "questions": [
+        {
+          "question": "How can I contact you?",
+          "answer": "📧 **Email:** tuhinkumarsingharoy2001@gmail.com\n📱 **Phone:** +91 9564825493\n💼 **LinkedIn:** [linkedin.com/in/tuhininaiml](https://linkedin.com/in/tuhininaiml)\n🐙 **GitHub:** [github.com/Tuhin108](https://github.com/Tuhin108)\n📺 **YouTube:** [Tuhin in AIML](https://youtube.com/@tuhininaiml)\n📍 **Location:** West Bengal, India"
+        },
+        {
+          "question": "Are you available for opportunities?",
+          "answer": "✅ **Yes, I'm actively seeking opportunities!**\n\n**Looking for:**\n• AI/ML Engineer positions\n• Data Science roles\n• Software Development opportunities\n• Research collaborations\n• Freelance AI/ML projects\n\n**Available for:**\n• Full-time positions (after graduation)\n• Internships and part-time roles\n• Consulting and project-based work\n• Technical mentoring and training\n\nFeel free to reach out at tuhinkumarsingharoy2001@gmail.com"
+        },
+        {
+          "question": "What's your preferred way of communication?",
+          "answer": "**For Professional Inquiries:**\n📧 Email: tuhinkumarsingharoy2001@gmail.com (Preferred)\n💼 LinkedIn: Direct messaging for networking\n\n**For Technical Discussions:**\n🐙 GitHub: Code reviews and collaboration\n📺 YouTube: Educational content and tutorials\n\n**For Quick Updates:**\n📱 Phone: +91 9564825493 (WhatsApp available)\n\nI typically respond to emails within 24 hours and am always open to discussing AI/ML projects and opportunities!"
+        }
+      ]
+    }
+  ]
+}
