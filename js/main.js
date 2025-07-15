@@ -48,7 +48,6 @@ class PortfolioApp {
       // Enhanced fallback data
       this.profileData = {
         name: "Tuhin Kumar Singha Roy",
-        tagline: "AI & ML Engineer",
         about:
           "Highly motivated and results-driven Computer Science Engineering Student specializing in Artificial Intelligence and Machine Learning, with a strong foundation in Data Analytics and Cloud technologies. Eager to leverage expertise in developing AI-powered solutions, optimizing data-driven strategies, and contributing to digital transformation initiatives.",
         contact: {
