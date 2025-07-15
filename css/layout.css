@@ -943,3 +943,112 @@ section {
     align-self: center;
   }
 }
+
+/* Profile Details Section (New Tabbed Section) */
+.profile-details-section {
+  background: var(--background-secondary); /* Or primary, depending on desired contrast */
+}
+
+.tabs-container {
+  margin-top: var(--spacing-2xl);
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: var(--spacing-md) var(--spacing-xl);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.tab-button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.1);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-color: transparent;
+  box-shadow: var(--neon-glow);
+}
+
+.tab-button.active:hover {
+  box-shadow: var(--neon-glow-hover);
+  transform: translateY(-2px);
+}
+
+.tab-content-wrapper {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: var(--spacing-2xl);
+  min-height: 400px; /* Ensure content area has some height */
+  position: relative;
+  overflow: hidden; /* For smooth transitions */
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Adjustments for content within tabs */
+.profile-details-section .about-text {
+  margin-bottom: var(--spacing-3xl); /* Add space between about and education */
+}
+
+.profile-details-section .education-timeline {
+  margin-top: var(--spacing-2xl); /* Ensure proper spacing */
+}
+
+.profile-details-section .skills-container {
+  margin-bottom: var(--spacing-3xl); /* Add space between skills and certifications */
+}
+
+/* Responsive adjustments for tabs */
+@media (max-width: 768px) {
+  .tab-buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .tab-button {
+    width: 100%;
+    justify-content: center;
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .tab-content-wrapper {
+    padding: var(--spacing-xl);
+  }
+}
