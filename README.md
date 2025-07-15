@@ -47,7 +47,7 @@ A modern, responsive portfolio website for AI/ML professionals featuring glassmo
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 /your-portfolio/
 ├─ index.html                 # Main HTML file
 ├─ data/
@@ -65,7 +65,7 @@ A modern, responsive portfolio website for AI/ML professionals featuring glassmo
 │   ├─ animations.js        # Animation controllers
 │   └─ chatbot.js           # AI chatbot functionality
 └─ README.md                # This file
-\`\`\`
+```
 
 ## 🛠️ Technologies Used
 
