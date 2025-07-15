@@ -15,6 +15,7 @@ class AIChatbot {
       await this.loadQAData()
       this.initializeEventListeners()
       this.renderCategories()
+      this.triggerAttentionAnimation() // ADD THIS LINE
     } catch (error) {
       console.error("Failed to initialize chatbot:", error)
       this.loadFallbackData()
@@ -226,6 +227,17 @@ class AIChatbot {
       .replace(/\[([^\]]+)\]$$([^)]+)$$/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
       .replace(/\n/g, "<br>")
       .replace(/📧|📱|💼|🐙|📺|📍|✅|🏆|🥈|⚽|♟️|📚|💻|🤝|📖/g, '<span class="emoji">$&</span>')
+  }
+
+  // New method to trigger attention animation
+  triggerAttentionAnimation() {
+    const chatbotToggle = document.getElementById("chatbot-toggle")
+    if (chatbotToggle) {
+      chatbotToggle.classList.add("attention-grabber")
+      setTimeout(() => {
+        chatbotToggle.classList.remove("attention-grabber")
+      }, 4000) // Animation runs for 4 seconds (2 cycles of 2s)
+    }
   }
 }
 
