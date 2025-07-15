@@ -28,6 +28,9 @@ class PortfolioApp {
       // Populate content
       this.populateContent()
 
+      // Initialize tabs after content is populated
+      this.initializeTabs() // ADD THIS LINE
+
       // Hide loading screen
       this.hideLoadingScreen()
     } catch (error) {
@@ -48,6 +51,7 @@ class PortfolioApp {
       // Enhanced fallback data
       this.profileData = {
         name: "Tuhin Kumar Singha Roy",
+        tagline: "AI & ML Engineer",
         about:
           "Highly motivated and results-driven Computer Science Engineering Student specializing in Artificial Intelligence and Machine Learning, with a strong foundation in Data Analytics and Cloud technologies. Eager to leverage expertise in developing AI-powered solutions, optimizing data-driven strategies, and contributing to digital transformation initiatives.",
         contact: {
@@ -618,6 +622,10 @@ class PortfolioApp {
     window.refreshDashboard = () => {
       this.refreshDashboard()
     }
+
+    window.exportDashboard = () => {
+      this.exportDashboard()
+    }
   }
 
   initializeTableauDashboard() {
@@ -749,6 +757,30 @@ class PortfolioApp {
         loadingScreen.style.display = "none"
       }, 500)
     }, 1500)
+  }
+
+  initializeTabs() {
+    const tabButtons = document.querySelectorAll(".tab-button")
+    const tabContents = document.querySelectorAll(".tab-content")
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const targetTab = button.dataset.tab
+
+        // Deactivate all buttons and content
+        tabButtons.forEach((btn) => btn.classList.remove("active"))
+        tabContents.forEach((content) => content.classList.remove("active"))
+
+        // Activate clicked button and corresponding content
+        button.classList.add("active")
+        document.getElementById(`${targetTab}-tab`).classList.add("active")
+
+        // If skills tab is activated, re-animate skill bars
+        if (targetTab === "skills-certs") {
+          this.animateSkillBars()
+        }
+      })
+    })
   }
 }
 
