@@ -619,10 +619,6 @@ class PortfolioApp {
     window.refreshDashboard = () => {
       this.refreshDashboard()
     }
-
-    window.exportDashboard = () => {
-      this.exportDashboard()
-    }
   }
 
   initializeTableauDashboard() {
