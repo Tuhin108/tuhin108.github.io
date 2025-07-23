@@ -5,27 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tuhin Kumar Singha Roy - AI & ML Engineer</title>
     
-    <!-- CSS Files -->
+    <link rel="icon" href="assets/images/github-favicon.png" type="image/png">
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     
-    <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     
-    <!-- BI Dashboard SDKs -->
-    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.23.1/dist/powerbi.min.js"></script>
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Screen -->
     <div id="loading-screen">
         <div class="loading-content">
             <div class="loading-spinner"></div>
@@ -33,22 +26,19 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header class="glassmorphic-header">
         <nav class="nav-container">
-            <div class="logo">
-                <h1 id="header-name">Loading...</h1>
-                <p id="header-tagline">Loading...</p>
-            </div>
             <div class="nav-menu">
                 <a href="#hero" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#education" class="nav-link">Education</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#achievements" class="nav-link">Achievements</a>
-                <a href="#dashboard" class="nav-link">Dashboard</a>
                 <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="header-right">
+                <div id="social-links-header" class="social-links">
+                    </div>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -61,9 +51,7 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section id="hero" class="hero-section">
             <div id="particles-js"></div>
             <div class="hero-content">
@@ -117,7 +105,6 @@
             </div>
         </section>
 
-      <!-- Profile Details Section -->
       <section id="profile-details" class="profile-details-section">
           <div class="container">
               <div class="section-header">
@@ -147,7 +134,7 @@
                                       <p>Technical Skills</p>
                                   </div>
                                   <div class="stat-item">
-                                      <h3><1</h3>
+                                      <h3>&lt;1</h3>
                                       <p>Years Experience</p>
                                   </div>
                               </div>
@@ -155,22 +142,19 @@
                           <div class="education-timeline">
                               <h3>Educational Journey</h3>
                               <div id="education-list" class="timeline-list">
-                                  <!-- Education will be populated by JavaScript -->
-                              </div>
+                                  </div>
                           </div>
                       </div>
                       <div id="skills-certs-tab" class="tab-content">
                           <div class="skills-container">
                               <h3>Technical Expertise</h3>
                               <div id="skills-grid" class="skills-grid">
-                                  <!-- Skills will be populated by JavaScript -->
-                              </div>
+                                  </div>
                           </div>
                           <div class="certifications-grid">
                               <h3>Recent Certifications</h3>
                               <div id="certifications-grid" class="certs-grid">
-                                  <!-- Certifications will be populated by JavaScript -->
-                              </div>
+                                  </div>
                           </div>
                       </div>
                   </div>
@@ -178,7 +162,6 @@
           </div>
       </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="experience-section">
             <div class="container">
                 <div class="section-header">
@@ -186,12 +169,10 @@
                     <p class="section-subtitle">Internships and work experience in AI/ML</p>
                 </div>
                 <div id="experience-timeline" class="experience-timeline">
-                    <!-- Experience will be populated by JavaScript -->
-                </div>
+                    </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="projects-section">
             <div class="container">
                 <div class="section-header">
@@ -199,12 +180,10 @@
                     <p class="section-subtitle">AI/ML solutions that make a difference</p>
                 </div>
                 <div id="projects-grid" class="projects-grid">
-                    <!-- Projects will be populated by JavaScript -->
-                </div>
+                    </div>
             </div>
         </section>
 
-        <!-- Achievements Section -->
         <section id="achievements" class="achievements-section">
             <div class="container">
                 <div class="section-header">
@@ -212,101 +191,28 @@
                     <p class="section-subtitle">Recognition and leadership experiences</p>
                 </div>
                 <div id="achievements-grid" class="achievements-grid">
-                    <!-- Achievements will be populated by JavaScript -->
-                </div>
+                    </div>
             </div>
         </section>
 
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="dashboard-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Analytics Dashboard</h2>
-                    <p class="section-subtitle">Interactive data visualization and insights</p>
-                </div>
-                <div class="dashboard-container">
-                    <div class="dashboard-controls">
-                        <button class="glassmorphic-btn" onclick="refreshDashboard()">
-                            <i class="fas fa-sync-alt"></i>
-                            Refresh
-                        </button>
-                        <button class="glassmorphic-btn" onclick="exportDashboard()">
-                            <i class="fas fa-download"></i>
-                            Export
-                        </button>
-                    </div>
-                    <div id="tableau-dashboard" class="dashboard-embed">
-                        <!-- Tableau dashboard will be embedded here -->
-                        <div class="dashboard-placeholder">
-                            <i class="fas fa-chart-bar"></i>
-                            <h3>Dashboard Loading...</h3>
-                            <p>Connecting to data visualization platform</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Let's collaborate on AI/ML projects</p>
+                    <p class="section-subtitle">Let's connect and collaborate on future projects.</p>
                 </div>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p id="contact-email">Loading...</p>
-                            </div>
+                <div class="contact-content-new">
+                    <a href="https://drive.google.com/file/d/1objr30pcbPBQNJJv8giIVcKbPRv50p_2/" target="_blank" rel="noopener" class="glassmorphic-btn primary large-btn">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                    <div id="social-links-contact" class="social-links">
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p id="contact-phone">Loading...</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <div>
-                                <h4>LinkedIn</h4>
-                                <a id="contact-linkedin" href="#" target="_blank">Loading...</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <div>
-                                <h4>GitHub</h4>
-                                <a id="contact-github" href="#" target="_blank">Loading...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="glassmorphic-btn primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Chatbot -->
     <div id="chatbot-container" class="chatbot-container">
         <div id="chatbot-toggle" class="chatbot-toggle">
             <i class="fas fa-robot"></i>
@@ -319,8 +225,7 @@
                 </button>
             </div>
             <div id="chatbot-categories" class="chatbot-categories">
-                <!-- Categories will be populated by JavaScript -->
-            </div>
+                </div>
             <div id="chatbot-questions" class="chatbot-questions" style="display: none;">
                 <div class="questions-header">
                     <button id="back-to-categories" class="back-btn">
@@ -330,8 +235,7 @@
                     <h4 id="current-category">Category</h4>
                 </div>
                 <div id="questions-list" class="questions-list">
-                    <!-- Questions will be populated by JavaScript -->
-                </div>
+                    </div>
             </div>
             <div id="chatbot-answer" class="chatbot-answer" style="display: none;">
                 <div class="answer-header">
@@ -342,13 +246,11 @@
                     <h4 id="current-question">Question</h4>
                 </div>
                 <div id="answer-content" class="answer-content">
-                    <!-- Answer will be populated by JavaScript -->
-                </div>
+                    </div>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/chatbot.js"></script>
