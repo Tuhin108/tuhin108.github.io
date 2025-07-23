@@ -365,8 +365,8 @@ section {
 /* Projects Section */
 .projects-grid {
   display: grid;
-  /* FIX: Changed to a 2-column grid for better space usage */
-  grid-template-columns: repeat(2, 1fr);
+  /* FIX: Changed to a 3-column grid for the new design */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: var(--spacing-xl);
 }
 
@@ -401,9 +401,8 @@ section {
     gap: var(--spacing-2xl);
   }
   
-  /* FIX: Adjust project grid for tablets */
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
