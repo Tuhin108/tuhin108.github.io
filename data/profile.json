@@ -1,10 +1,11 @@
 {
   "name": "Tuhin Kumar Singha Roy",
+  "tagline": "AI & ML Engineer",
   "about": "Highly motivated and results-driven Computer Science Engineering Student specializing in Artificial Intelligence and Machine Learning, with a strong foundation in Data Analytics and Cloud technologies. Eager to leverage expertise in developing AI-powered solutions, optimizing data-driven strategies, and contributing to digital transformation initiatives. Proven ability to build, train, and deploy machine learning models, with hands-on experience in Python, TensorFlow, AWS, and advanced NLP techniques.",
   "contact": {
     "email": "tuhinkumarsingharoy2001@gmail.com",
     "phone": "+91 9564825493",
-    "linkedin": "https://linkedin.com/in/tuhininaiml",
+    "linkedin": "https://www.linkedin.com/in/tuhininaiml",
     "github": "https://github.com/Tuhin108",
     "location": "West Bengal, India"
   },
@@ -101,7 +102,7 @@
       "description": "Developed an interactive web application that classifies email content as Spam or Not Spam using Google's Gemini LLM API. Engineered structured prompts with few-shot examples to extract JSON-based AI output including classification, confidence score, reasoning, and risk level.",
       "technologies": ["Python", "Streamlit", "Gemini LLM", "Prompt Engineering"],
       "github": "https://github.com/Tuhin108/Email-Classifier",
-      "demo": https://youtu.be/hIcA-1DhuQk,
+      "demo": "https://youtu.be/hIcA-1DhuQk",
       "image": null,
       "featured": true
     },
@@ -110,7 +111,7 @@
       "description": "Built a web app that generates role-based interview questions and evaluates spoken/text answers using Gemini LLM with JSON-based feedback and scoring. Integrated voice input, real-time feedback, and result visualization.",
       "technologies": ["Flask", "Gemini LLM", "HTML/CSS", "JavaScript", "Prompt Engineering"],
       "github": "https://github.com/Tuhin108/InterviewGPT",
-      "demo": https://youtu.be/Iqfe-utm22E,
+      "demo": "https://youtu.be/Iqfe-utm22E",
       "image": null,
       "featured": true
     },
@@ -205,14 +206,13 @@
   ],
   "socialMedia": {
     "youtube": "https://youtube.com/@tuhininaiml",
-    "twitter": null,
-    "instagram": null,
-    "medium": null
+    "instagram": "https://www.instagram.com/thatsoptimusprime/",
+    "linkedin": "https://www.linkedin.com/in/tuhininaiml"
   },
   "languages": [
     {
       "name": "English",
-      "proficiency": "Professional"
+      "proficiency": " Business Professional"
     },
     {
       "name": "Hindi",
