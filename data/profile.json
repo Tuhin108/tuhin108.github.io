@@ -24,14 +24,16 @@
       "position": "Artificial Intelligence / Machine Learning Intern",
       "duration": "Jan 2025 - Present",
       "type": "Internship",
-      "description": "Developed and trained diverse AI, ML, and Deep Learning models, including LLMs, contributing to early-stage AI solution development. Gained practical experience deploying models on AWS, while maintaining documentation and building prototypes."
+      "description": "Developed and trained diverse AI, ML, and Deep Learning models, including LLMs, contributing to early-stage AI solution development. Gained practical experience deploying models on AWS, while maintaining documentation and building prototypes.",
+      "certificate": "https://drive.google.com/file/d/1Y1O9zbm5N-bu3Gp3GnRzyyCYgt32sGhn/view"
     },
     {
       "company": "Edunet Foundation",
       "position": "Artificial Intelligence / Machine Learning Intern",
       "duration": "Dec 2024 - Feb 2025",
       "type": "Internship",
-      "description": "Developed CNN for plant disease detection (38 classes, 85%+ accuracy; processed 63,000+ images). Built & deployed (Flask) ML pipelines for crop/fertilizer recommendation (90% accuracy; trained on 1000+ records)."
+      "description": "Developed CNN for plant disease detection (38 classes, 85%+ accuracy; processed 63,000+ images). Built & deployed (Flask) ML pipelines for crop/fertilizer recommendation (90% accuracy; trained on 1000+ records).",
+      "certificate": "https://drive.google.com/file/d/1EXnOZcZbhJK-cVRv2Pa4dTppwNmgLETt/view"
     }
   ],
   "skills": [
