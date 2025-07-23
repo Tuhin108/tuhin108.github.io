@@ -108,7 +108,7 @@ class PortfolioApp {
             technologies: ["Python", "Streamlit", "Gemini LLM", "Prompt Engineering"],
             github: "https://github.com/Tuhin108/email-spam-classifier",
             demo: null,
-            image: null,
+            image: "images/email_spam_notspam.png",
             featured: true,
           },
           {
@@ -118,7 +118,7 @@ class PortfolioApp {
             technologies: ["Flask", "Gemini LLM", "HTML/CSS", "JavaScript", "Prompt Engineering"],
             github: "https://github.com/Tuhin108/interview-gpt",
             demo: null,
-            image: null,
+            image: "images/interview_gpt.png",
             featured: true,
           },
           {
@@ -128,7 +128,7 @@ class PortfolioApp {
             technologies: ["Python", "TensorFlow", "CNN", "Streamlit", "OpenCV"],
             github: "https://github.com/Tuhin108/plant-disease-detection",
             demo: null,
-            image: null,
+            image: "images/plant_disease.png",
             featured: true,
           },
           {
@@ -138,7 +138,7 @@ class PortfolioApp {
             technologies: ["Python", "Random Forest", "Flask", "Machine Learning"],
             github: "https://github.com/Tuhin108/crop-fertilizer-recommendation",
             demo: null,
-            image: null,
+            image: "images/crop_fertilizer.png",
             featured: true,
           },
           {
@@ -148,7 +148,7 @@ class PortfolioApp {
             technologies: ["Python", "Mistral API", "NLP", "Streamlit", "Flask"],
             github: "https://github.com/Tuhin108/farmer-friend",
             demo: null,
-            image: null,
+            image: "images/farm_friend.png",
             featured: false,
           },
           {
@@ -158,7 +158,7 @@ class PortfolioApp {
             technologies: ["Python", "Mistral API", "NLP", "Streamlit", "Flask"],
             github: "https://github.com/Tuhin108/ai-chatbot",
             demo: null,
-            image: null,
+            image: "images/chatbot.png",
             featured: false,
           },
           {
@@ -167,7 +167,7 @@ class PortfolioApp {
             technologies: ["HTML", "CSS", "JavaScript", "Mathematics", "3D Graphics"],
             github: "https://github.com/Tuhin108/2D-and-3D-Drone-Irrigation-Simulation",
             demo: null,
-            image: null,
+            image: "images/2D_3D.png",
             featured: false
           }
         ],
@@ -395,16 +395,18 @@ class PortfolioApp {
 
     projects.forEach((project, index) => {
       const projectCard = document.createElement("div")
-      // *** FIX: Use the new v4 class for the redesigned card ***
       projectCard.className = "project-card-v4 fade-in"
       projectCard.style.animationDelay = `${index * 0.2}s`
 
       const techTags = project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join("")
 
-      // *** FIX: Updated HTML structure for the new design ***
       projectCard.innerHTML = `
         <div class="project-card-image">
-            <i class="fas fa-code"></i>
+          ${
+            project.image
+              ? `<img src="${project.image}" alt="${project.title}" loading="lazy" style="width:100%; height:100%; object-fit: cover;">`
+              : `<i class="fas fa-code"></i>`
+          }
         </div>
         <div class="project-card-content">
             <h3 class="project-title">${project.title}</h3>
