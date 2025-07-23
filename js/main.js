@@ -76,6 +76,7 @@ class PortfolioApp {
             type: "Internship",
             description:
               "Developed and trained diverse AI, ML, and Deep Learning models, including LLMs, contributing to early-stage AI solution development. Gained practical experience deploying models on AWS, while maintaining documentation and building prototypes.",
+            certificate: "https://drive.google.com/file/d/1Y1O9zbm5N-bu3Gp3GnRzyyCYgt32sGhn/view"
           },
           {
             company: "Edunet Foundation",
@@ -84,6 +85,7 @@ class PortfolioApp {
             type: "Internship",
             description:
               "Developed CNN for plant disease detection (38 classes, 85%+ accuracy; processed 63,000+ images). Built & deployed (Flask) ML pipelines for crop/fertilizer recommendation (90% accuracy; trained on 1000+ records).",
+            certificate: "https://drive.google.com/file/d/1EXnOZcZbhJK-cVRv2Pa4dTppwNmgLETt/view"
           },
         ],
         skills: [
@@ -298,18 +300,28 @@ class PortfolioApp {
     const experienceTimeline = document.getElementById("experience-timeline")
     experienceTimeline.innerHTML = experience
       .map(
-        (exp, index) => `
-      <div class="experience-card fade-in" style="animation-delay: ${index * 0.2}s">
-        <div class="experience-card-header">
-            <div class="experience-card-title">
-              <h4>${exp.position}</h4>
-              <p>${exp.company}</p>
-            </div>
-            <span class="experience-card-date">${exp.duration}</span>
-        </div>
-        <p class="experience-card-description">${exp.description}</p>
-      </div>
-    `,
+        (exp, index) => {
+            let certificateBtn = '';
+            if (exp.certificate) {
+                certificateBtn = `<a href="${exp.certificate}" target="_blank" rel="noopener" class="glassmorphic-btn secondary certificate-btn">
+                    <i class="fas fa-certificate"></i> View Certificate
+                </a>`;
+            }
+
+            return `
+              <div class="experience-card fade-in" style="animation-delay: ${index * 0.2}s">
+                <div class="experience-card-header">
+                    <div class="experience-card-title">
+                      <h4>${exp.position}</h4>
+                      <p>${exp.company}</p>
+                    </div>
+                    <span class="experience-card-date">${exp.duration}</span>
+                </div>
+                <p class="experience-card-description">${exp.description}</p>
+                ${certificateBtn}
+              </div>
+            `;
+        }
       )
       .join("")
   }
