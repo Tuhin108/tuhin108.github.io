@@ -50,7 +50,7 @@ class AIChatbot {
             {
               question: "What's your educational background?",
               answer:
-                "I'm currently pursuing B.Tech in Computer Science and Engineering (AI and ML) from MCKV Institute of Engineering with a CGPA of 8.07.",
+                "I'm currently pursuing B.Tech in Computer Science and Engineering (AI and ML) from MCKV Institute of Engineering with a CGPA of 8.2.",
             },
           ],
         },
@@ -77,7 +77,7 @@ class AIChatbot {
             {
               question: "How can I contact you?",
               answer:
-                "📧 Email: tuhinkumarsingharoy2001@gmail.com\n📱 Phone: +91 9564825493\n💼 LinkedIn: linkedin.com/in/tuhininaiml\n🐙 GitHub: github.com/Tuhin108",
+                "📧 Email: tuhinkumarsingharoy2001@gmail.com\n📱 Phone: +91 9564825493\n💼 LinkedIn: [linkedin.com/in/tuhininaiml](https://linkedin.com/in/tuhininaiml)\n🐙 GitHub: [github.com/Tuhin108](https://github.com/Tuhin108)",
             },
           ],
         },
@@ -221,10 +221,13 @@ class AIChatbot {
   }
 
   formatAnswer(answer) {
+    // *** FIX: Corrected the regex for creating hyperlinks. ***
+    // The original `$$([^)]+)$$` was incorrect.
+    // It has been replaced with `\(([^)]+)\)` to correctly match markdown links.
     return answer
       .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.*?)\*/g, "<em>$1</em>")
-      .replace(/\[([^\]]+)\]$$([^)]+)$$/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
       .replace(/\n/g, "<br>")
       .replace(/📧|📱|💼|🐙|📺|📍|✅|🏆|🥈|⚽|♟️|📚|💻|🤝|📖/g, '<span class="emoji">$&</span>')
   }
