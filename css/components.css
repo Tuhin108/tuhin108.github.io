@@ -207,69 +207,52 @@
   line-height: 1.7;
 }
 
-
-/* Redesigned Project Card */
-.project-card-v2 {
+/* NEW: Redesigned Project Card v3 */
+.project-card-v3 {
   background: var(--glass-bg);
   backdrop-filter: var(--glass-backdrop);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
-  overflow: hidden;
-  transition: all var(--transition-normal);
+  padding: var(--spacing-lg);
   display: flex;
-  flex-direction: column;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+  transition: all var(--transition-normal);
 }
 
-.project-card-v2:hover {
-  transform: translateY(-8px);
+.project-card-v3:hover {
+  transform: translateY(-5px);
   box-shadow: var(--glass-shadow);
   border-color: var(--primary-color);
 }
 
-.project-card-v2 .project-image {
-  height: 220px;
-  background: linear-gradient(135deg, var(--background-tertiary), var(--background-secondary));
+.project-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-size: var(--font-size-2xl);
 }
 
-.project-card-v2 .project-image i {
-  font-size: var(--font-size-5xl);
-  color: var(--primary-color);
-  opacity: 0.5;
-}
-
-.project-card-v2 .project-content {
-  padding: var(--spacing-lg);
+.project-details {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card-v2 .project-tech {
-  margin-top: auto;
-  padding-top: var(--spacing-md);
-}
-
-.project-card-v2 .project-links {
-  border-top: 1px solid var(--glass-border);
-  margin-top: var(--spacing-lg);
-  padding-top: var(--spacing-lg);
-  display: flex;
-  justify-content: flex-end;
 }
 
 .project-title {
   font-size: var(--font-size-xl);
   font-weight: 600;
-  margin-bottom: var(--spacing-sm);
+  margin: 0 0 var(--spacing-sm) 0;
   color: var(--text-primary);
 }
 
 .project-description {
   color: var(--text-secondary);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   line-height: 1.6;
 }
 
@@ -277,7 +260,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
 }
 
 .tech-tag {
@@ -293,6 +276,7 @@
 .project-links {
   display: flex;
   gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
 }
 
 .project-link {
