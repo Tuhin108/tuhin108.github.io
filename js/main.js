@@ -395,18 +395,18 @@ class PortfolioApp {
 
     projects.forEach((project, index) => {
       const projectCard = document.createElement("div")
-      // *** FIX: Use the new v3 class for the redesigned card ***
-      projectCard.className = "project-card-v3 fade-in"
+      // *** FIX: Use the new v4 class for the redesigned card ***
+      projectCard.className = "project-card-v4 fade-in"
       projectCard.style.animationDelay = `${index * 0.2}s`
 
       const techTags = project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join("")
 
       // *** FIX: Updated HTML structure for the new design ***
       projectCard.innerHTML = `
-        <div class="project-icon">
+        <div class="project-card-image">
             <i class="fas fa-code"></i>
         </div>
-        <div class="project-details">
+        <div class="project-card-content">
             <h3 class="project-title">${project.title}</h3>
             <p class="project-description">${project.description}</p>
             <div class="project-tech">${techTags}</div>
