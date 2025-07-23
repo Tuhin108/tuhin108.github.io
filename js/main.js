@@ -22,14 +22,13 @@ class PortfolioApp {
       this.initializeScrollAnimations()
       this.initializeNavigation()
       this.initializeThemeToggle()
-      this.initializeDashboard()
       this.initializeLazyLoading()
 
       // Populate content
       this.populateContent()
 
       // Initialize tabs after content is populated
-      this.initializeTabs() // ADD THIS LINE
+      this.initializeTabs()
 
       // Hide loading screen
       this.hideLoadingScreen()
@@ -65,7 +64,7 @@ class PortfolioApp {
             institution: "MCKV Institute of Engineering",
             degree: "B.Tech in Computer Science and Engineering (AI and ML)",
             duration: "2022-2026",
-            cgpa: "8.07",
+            cgpa: "8.2",
             location: "Liluah, West Bengal",
           },
         ],
@@ -162,6 +161,15 @@ class PortfolioApp {
             image: null,
             featured: false,
           },
+          {
+            title: "2D and 3D Drone Irrigation Simulation",
+            description: "Created a simulation system to analyze drone-based irrigation in 2D and 3D environments. Simulated real-world water distribution models to improve agricultural irrigation strategies and promote sustainable farming.",
+            technologies: ["HTML", "CSS", "JavaScript", "Mathematics", "3D Graphics"],
+            github: "https://github.com/Tuhin108/2D-and-3D-Drone-Irrigation-Simulation",
+            demo: null,
+            image: null,
+            featured: false
+          }
         ],
         certifications: [
           {
@@ -207,6 +215,11 @@ class PortfolioApp {
             date: "2025",
           },
         ],
+         socialMedia: {
+            youtube: "https://youtube.com/@tuhininaiml",
+            instagram: "https://www.instagram.com/thatsoptimusprime/",
+            linkedin: "https://www.linkedin.com/in/tuhininaiml"
+        }
       }
     }
   }
@@ -215,10 +228,6 @@ class PortfolioApp {
     if (!this.profileData) return
 
     const data = this.profileData
-
-    // Header
-    document.getElementById("header-name").textContent = data.name
-    document.getElementById("header-tagline").textContent = data.tagline
 
     // Hero section
     document.getElementById("hero-name").textContent = data.name
@@ -229,14 +238,6 @@ class PortfolioApp {
     document.getElementById("projects-count").textContent = data.projects.length
     document.getElementById("skills-count").textContent = data.skills.length
 
-    // Contact section
-    document.getElementById("contact-email").textContent = data.contact.email
-    document.getElementById("contact-phone").textContent = data.contact.phone
-    document.getElementById("contact-linkedin").href = data.contact.linkedin
-    document.getElementById("contact-linkedin").textContent = data.contact.linkedin.replace("https://", "")
-    document.getElementById("contact-github").href = data.contact.github
-    document.getElementById("contact-github").textContent = data.contact.github.replace("https://", "")
-
     // Populate all sections
     this.populateSkills(data.skills)
     this.populateEducation(data.education)
@@ -244,6 +245,27 @@ class PortfolioApp {
     this.populateProjects(data.projects)
     this.populateCertifications(data.certifications)
     this.populateAchievements(data.achievements)
+    this.populateSocialLinks(data.socialMedia, data.contact)
+  }
+
+  populateSocialLinks(socials, contact) {
+      const headerLinks = document.getElementById("social-links-header");
+      const contactLinks = document.getElementById("social-links-contact");
+
+      let linksHTML = `
+        <a href="${contact.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="${contact.github}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      `;
+
+      if (socials && socials.instagram) {
+          linksHTML += `<a href="${socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>`;
+      }
+      if (socials && socials.youtube) {
+          linksHTML += `<a href="${socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>`;
+      }
+
+      if(headerLinks) headerLinks.innerHTML = linksHTML;
+      if(contactLinks) contactLinks.innerHTML = linksHTML;
   }
 
   populateEducation(education) {
@@ -277,21 +299,15 @@ class PortfolioApp {
     experienceTimeline.innerHTML = experience
       .map(
         (exp, index) => `
-      <div class="experience-item fade-in" style="animation-delay: ${index * 0.2}s">
-        <div class="experience-marker">
-          <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="experience-content">
-          <div class="experience-header">
-            <div class="experience-title">
+      <div class="experience-card fade-in" style="animation-delay: ${index * 0.2}s">
+        <div class="experience-card-header">
+            <div class="experience-card-title">
               <h4>${exp.position}</h4>
-              <span class="experience-type">${exp.type}</span>
+              <p>${exp.company}</p>
             </div>
-            <span class="experience-date">${exp.duration}</span>
-          </div>
-          <h5 class="company-name">${exp.company}</h5>
-          <p class="experience-description">${exp.description}</p>
+            <span class="experience-card-date">${exp.duration}</span>
         </div>
+        <p class="experience-card-description">${exp.description}</p>
       </div>
     `,
       )
@@ -379,7 +395,7 @@ class PortfolioApp {
 
     projects.forEach((project, index) => {
       const projectCard = document.createElement("div")
-      projectCard.className = "project-card fade-in"
+      projectCard.className = "project-card-v2 fade-in" // Use new class here
       projectCard.style.animationDelay = `${index * 0.2}s`
 
       const techTags = project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join("")
@@ -613,110 +629,7 @@ class PortfolioApp {
       themeIcon.className = theme === "light" ? "fas fa-moon" : "fas fa-sun"
     }
   }
-
-  initializeDashboard() {
-    // Initialize Tableau dashboard
-    this.initializeTableauDashboard()
-
-    // Dashboard controls
-    window.refreshDashboard = () => {
-      this.refreshDashboard()
-    }
-
-    window.exportDashboard = () => {
-      this.exportDashboard()
-    }
-  }
-
-  initializeTableauDashboard() {
-    const dashboardContainer = document.getElementById("tableau-dashboard")
-
-    try {
-      // Demo placeholder with enhanced chart
-      dashboardContainer.innerHTML = `
-        <div class="dashboard-placeholder">
-          <i class="fas fa-chart-bar"></i>
-          <h3>Interactive Dashboard</h3>
-          <p>Connect your Tableau Public or Power BI dashboard here</p>
-          <div style="margin-top: 2rem;">
-            <canvas id="demo-chart" width="400" height="200"></canvas>
-          </div>
-        </div>
-      `
-
-      this.createDemoChart()
-    } catch (error) {
-      console.error("Error initializing dashboard:", error)
-    }
-  }
-
-  createDemoChart() {
-    const canvas = document.getElementById("demo-chart")
-    if (!canvas) return
-
-    const ctx = canvas.getContext("2d")
-    const width = canvas.width
-    const height = canvas.height
-
-    // Clear canvas
-    ctx.clearRect(0, 0, width, height)
-
-    // Demo data
-    const data = [95, 90, 85, 80, 75, 85, 90]
-    const labels = ["Python", "ML", "DL", "NLP", "AWS", "Flask", "Streamlit"]
-
-    // Chart styling
-    const barWidth = 40
-    const barSpacing = 10
-    const maxValue = Math.max(...data)
-    const chartHeight = height - 60
-
-    // Draw bars
-    data.forEach((value, index) => {
-      const x = (barWidth + barSpacing) * index + 20
-      const barHeight = (value / maxValue) * chartHeight
-      const y = height - barHeight - 30
-
-      // Gradient
-      const gradient = ctx.createLinearGradient(0, y, 0, y + barHeight)
-      gradient.addColorStop(0, "#0066ff")
-      gradient.addColorStop(1, "#00d4ff")
-
-      ctx.fillStyle = gradient
-      ctx.fillRect(x, y, barWidth, barHeight)
-
-      // Labels
-      ctx.fillStyle = "#666"
-      ctx.font = "12px Inter"
-      ctx.textAlign = "center"
-      ctx.fillText(labels[index], x + barWidth / 2, height - 10)
-
-      // Values
-      ctx.fillStyle = "#333"
-      ctx.fillText(value + "%", x + barWidth / 2, y - 5)
-    })
-  }
-
-  refreshDashboard() {
-    const dashboardContainer = document.getElementById("tableau-dashboard")
-    dashboardContainer.style.opacity = "0.5"
-
-    setTimeout(() => {
-      this.createDemoChart()
-      dashboardContainer.style.opacity = "1"
-    }, 1000)
-  }
-
-  exportDashboard() {
-    const canvas = document.getElementById("demo-chart")
-    if (canvas) {
-      const link = document.createElement("a")
-      link.download = "dashboard-export.png"
-      link.href = canvas.toDataURL()
-      link.click()
-    }
-  }
-
+  
   initializeLazyLoading() {
     const images = document.querySelectorAll('img[loading="lazy"]')
 
@@ -794,32 +707,4 @@ window.scrollToSection = (sectionId) => {
 // Initialize app when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   window.portfolioApp = new PortfolioApp()
-})
-
-// Handle form submission
-document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.querySelector(".contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]')
-      const originalText = submitBtn.innerHTML
-
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...'
-      submitBtn.disabled = true
-
-      setTimeout(() => {
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!'
-        submitBtn.style.background = "#27ae60"
-
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText
-          submitBtn.disabled = false
-          submitBtn.style.background = ""
-          contactForm.reset()
-        }, 2000)
-      }, 1500)
-    })
-  }
 })
