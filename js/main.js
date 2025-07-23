@@ -395,39 +395,37 @@ class PortfolioApp {
 
     projects.forEach((project, index) => {
       const projectCard = document.createElement("div")
-      projectCard.className = "project-card-v2 fade-in" // Use new class here
+      // *** FIX: Use the new v3 class for the redesigned card ***
+      projectCard.className = "project-card-v3 fade-in"
       projectCard.style.animationDelay = `${index * 0.2}s`
 
       const techTags = project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join("")
 
+      // *** FIX: Updated HTML structure for the new design ***
       projectCard.innerHTML = `
-        <div class="project-image">
-          ${
-            project.image
-              ? `<img src="${project.image}" alt="${project.title}" loading="lazy">`
-              : `<i class="fas fa-code project-placeholder"></i>`
-          }
+        <div class="project-icon">
+            <i class="fas fa-code"></i>
         </div>
-        <div class="project-content">
-          <h3 class="project-title">${project.title}</h3>
-          <p class="project-description">${project.description}</p>
-          <div class="project-tech">${techTags}</div>
-          <div class="project-links">
-            ${
-              project.github
-                ? `<a href="${project.github}" class="project-link" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i> Code
-            </a>`
-                : ""
-            }
-            ${
-              project.demo
-                ? `<a href="${project.demo}" class="project-link" target="_blank" rel="noopener">
-                <i class="fas fa-external-link-alt"></i> Demo
-            </a>`
-                : ""
-            }
-          </div>
+        <div class="project-details">
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <div class="project-tech">${techTags}</div>
+            <div class="project-links">
+                ${
+                  project.github
+                    ? `<a href="${project.github}" class="project-link" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> Code
+                </a>`
+                    : ""
+                }
+                ${
+                  project.demo
+                    ? `<a href="${project.demo}" class="project-link" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                </a>`
+                    : ""
+                }
+            </div>
         </div>
       `
 
