@@ -207,39 +207,37 @@
   line-height: 1.7;
 }
 
-/* NEW: Redesigned Project Card v3 */
-.project-card-v3 {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-backdrop);
+/* NEW: Redesigned Project Card v4 */
+.project-card-v4 {
+  background-color: var(--background-secondary);
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: var(--spacing-lg);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
   display: flex;
-  gap: var(--spacing-lg);
-  align-items: flex-start;
-  transition: all var(--transition-normal);
+  flex-direction: column;
 }
 
-.project-card-v3:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--glass-shadow);
+.project-card-v4:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-color: var(--primary-color);
 }
 
-.project-icon {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  border-radius: 12px;
+.project-card-image {
+  height: 200px;
+  background-color: var(--background-tertiary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: var(--font-size-2xl);
+  font-size: 4rem;
+  color: var(--primary-color);
 }
 
-.project-details {
+.project-card-content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -252,7 +250,8 @@
 
 .project-description {
   color: var(--text-secondary);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-grow: 1; /* Pushes tags and links down */
   line-height: 1.6;
 }
 
@@ -260,12 +259,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 .tech-tag {
-  background: var(--background-secondary);
-  color: var(--primary-color);
+  background: var(--glass-bg);
+  color: var(--text-secondary);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: 6px;
   font-size: var(--font-size-sm);
@@ -274,9 +273,12 @@
 }
 
 .project-links {
+  border-top: 1px solid var(--glass-border);
+  padding-top: var(--spacing-lg);
+  margin-top: auto; /* Aligns to the bottom */
   display: flex;
+  justify-content: flex-end;
   gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
 }
 
 .project-link {
@@ -290,8 +292,8 @@
 
 .project-link:hover {
   color: var(--secondary-color);
+  text-decoration: underline;
 }
-
 
 /* Chatbot Styles */
 .chatbot-container {
@@ -321,7 +323,6 @@
   box-shadow: var(--neon-glow-hover);
 }
 
-/* New animation for chatbot toggle */
 .chatbot-toggle.attention-grabber {
   animation: pulse-glow 2s infinite;
 }
