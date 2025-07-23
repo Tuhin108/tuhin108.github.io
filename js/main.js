@@ -395,34 +395,24 @@ class PortfolioApp {
 
     projects.forEach((project, index) => {
       const projectCard = document.createElement("div")
-      projectCard.className = "project-card-v4 fade-in"
+      projectCard.className = "project-card-v5 fade-in"
       projectCard.style.animationDelay = `${index * 0.2}s`
 
-      const techTags = project.technologies.map((tech) => `<span class="tech-tag">${tech}</span>`).join("")
-
       projectCard.innerHTML = `
-        <div class="project-card-image">
-          ${
-            project.image
-              ? `<img src="${project.image}" alt="${project.title}" loading="lazy" style="width:100%; height:100%; object-fit: cover;">`
-              : `<i class="fas fa-code"></i>`
-          }
-        </div>
-        <div class="project-card-content">
-            <h3 class="project-title">${project.title}</h3>
-            <p class="project-description">${project.description}</p>
-            <div class="project-tech">${techTags}</div>
-            <div class="project-links">
+        <img src="${project.image}" alt="${project.title}" loading="lazy">
+        <div class="project-overlay">
+            <h3 class="project-overlay-title">${project.title}</h3>
+            <div class="project-overlay-links">
                 ${
                   project.github
-                    ? `<a href="${project.github}" class="project-link" target="_blank" rel="noopener">
+                    ? `<a href="${project.github}" class="project-overlay-link" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i> Code
                 </a>`
                     : ""
                 }
                 ${
                   project.demo
-                    ? `<a href="${project.demo}" class="project-link" target="_blank" rel="noopener">
+                    ? `<a href="${project.demo}" class="project-overlay-link" target="_blank" rel="noopener">
                     <i class="fas fa-external-link-alt"></i> Demo
                 </a>`
                     : ""
