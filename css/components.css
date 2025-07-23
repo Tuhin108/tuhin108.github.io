@@ -205,6 +205,12 @@
 .experience-card-description {
   color: var(--text-secondary);
   line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+}
+
+.certificate-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
 }
 
 /* NEW: Redesigned Project Card v5 (Hover Reveal) */
