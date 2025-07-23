@@ -46,7 +46,7 @@
       "questions": [
         {
           "question": "What are your featured projects?",
-          "answer": "Here are my key projects:\n\n**1. AI-Powered Email Spam Classifier**\n• Built using Google's Gemini LLM API\n• Interactive web app with Streamlit\n• JSON-based AI output with confidence scoring\n\n**2. InterviewGPT – AI Mock Interview**\n• Role-based interview question generation\n• Real-time feedback using Gemini LLM\n• Voice input and result visualization\n\n**3. Plant Disease Detection System**\n• CNN model for 38 plant disease classes\n• 85%+ accuracy on 63,000+ images\n• Deployed with Streamlit\n\n**4. Crop & Fertilizer Recommendation**\n• Random Forest ML pipelines\n• 90% accuracy on 1000+ records\n• Flask deployment for smart farming"
+          "answer": "Here are all my key projects:\n\n**1. AI-Powered Email Spam Classifier**\n• Built using Google's Gemini LLM API with structured prompts.\n\n**2. InterviewGPT – AI Mock Interview**\n• Generates role-based interview questions and evaluates answers using Gemini LLM.\n\n**3. Plant Disease Detection System**\n• CNN model for 38 plant disease classes with 85%+ accuracy.\n\n**4. Crop & Fertilizer Recommendation**\n• Random Forest ML pipelines with 90% accuracy for smart farming.\n\n**5. Farmer-Friend (AI Assistant)**\n• AI assistant using Mistral API for crop and fertilizer recommendations.\n\n**6. AI Chatbot**\n• Interactive chatbot using Mistral API with NLP for context-aware conversations.\n\n**7. 2D and 3D Drone Irrigation Simulation**\n• JavaScript-based simulation to analyze and improve drone irrigation."
         },
         {
           "question": "Tell me about your AI/ML projects",
@@ -86,7 +86,7 @@
       "questions": [
         {
           "question": "What's your educational background?",
-          "answer": "**Current Education:**\n**MCKV Institute of Engineering**\nB.Tech in Computer Science and Engineering (AI and ML)\n📅 2022-2026 | 🎯 CGPA: 8.07\n📍 Liluah, West Bengal\n\nSpecializing in Artificial Intelligence and Machine Learning with strong foundation in algorithms, data structures, and advanced AI techniques."
+          "answer": "**Current Education:**\n**MCKV Institute of Engineering**\nB.Tech in Computer Science and Engineering (AI and ML)\n📅 2022-2026 | 🎯 CGPA: 8.2\n📍 Liluah, West Bengal\n\nSpecializing in Artificial Intelligence and Machine Learning with strong foundation in algorithms, data structures, and advanced AI techniques."
         },
         {
           "question": "What certifications do you have?",
