@@ -619,7 +619,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
         <span class="rsub">Prerequisite layer before touching a claim</span>
         <div class="link-row">
           <a class="link-chip" href="https://www.wipo.int/en/web/wipo-academy/programs/ip-elearning/index" target="_blank">WIPO Academy — free IP eLearning (DL‑101, DL‑301)</a>
-          <a class="link-chip" href="https://www.uspto.gov/patents/laws/examination-policy/subject-matter-eligibility" target="_blank">USPTO — Subject Matter Eligibility hub</a>
+          <a class="link-chip" href="https://www.uspto.gov/ip-policy/patent-policy/patent-subject-matter-eligibility" target="_blank">USPTO — Subject Matter Eligibility hub</a>
           <a class="link-chip" href="https://www.uspto.gov/web/offices/pac/mpep/index.html" target="_blank">USPTO — Manual of Patent Examining Procedure (MPEP)</a>
           <a class="link-chip" href="https://www.wipo.int/en/web/patent-drafting" target="_blank">WIPO — Patent Drafting program overview</a>
         </div>
@@ -629,7 +629,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
         <h4>Module 1 — Basic Claim Drafting</h4>
         <span class="rsub">Grammar, categories, first independent claims</span>
         <div class="link-row">
-          <a class="link-chip" href="https://welc.wipo.int/ipdtp/" target="_blank">WIPO — International Patent Drafting Training Program</a>
+          <a class="link-chip" href="https://www.wipo.int/en/web/patent-drafting/training-program" target="_blank">WIPO — International Patent Drafting Training Program</a>
           <a class="link-chip" href="https://www.uspto.gov/web/offices/pac/mpep/s2111.html" target="_blank">MPEP §2111 — Claim Interpretation / Broadest Reasonable Interpretation</a>
           <a class="link-chip" href="https://ppubs.uspto.gov/pubwebapp/" target="_blank">USPTO Patent Public Search — read real issued claims</a>
           <a class="link-chip" href="https://www.youtube.com/user/USPTOvideo" target="_blank">USPTO official YouTube — search "claim drafting" workshops</a>
@@ -638,7 +638,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 
       <div class="resource-module">
         <h4>Module 2 — Intermediate Claim Scope Engineering</h4>
-        <span class="rsub">Breadth trade-offs, distributed systems, AI claiming, §101</span>
+        <span class="rsub">Breadth trade-offs, distributed systems, AI claiming, §101 &amp; Trade Secret bounds</span>
         <div class="link-row">
           <a class="link-chip" href="https://www.uspto.gov/web/offices/pac/mpep/s2173.html" target="_blank">MPEP §2173 — Definiteness Requirement</a>
           <a class="link-chip" href="https://www.federalregister.gov/documents/2024/07/17/2024-15377/2024-guidance-update-on-patent-subject-matter-eligibility-including-on-artificial-intelligence" target="_blank">Federal Register — 2024 AI Subject-Matter-Eligibility Guidance Update</a>
@@ -660,7 +660,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
 
       <div class="resource-module">
         <h4>Module 4 — Expert / Business-Integrated Strategy</h4>
-        <span class="rsub">Cross-jurisdiction, AI-assisted drafting oversight, capstone</span>
+        <span class="rsub">Cross-jurisdiction, AI-assisted drafting oversight &amp; Programmatic QA, capstone</span>
         <div class="link-row">
           <a class="link-chip" href="https://patentscope.wipo.int/" target="_blank">WIPO PATENTSCOPE — cross-jurisdiction PCT/national search</a>
           <a class="link-chip" href="https://worldwide.espacenet.com/" target="_blank">Espacenet (EPO) — compare EPO vs. USPTO claim style</a>
@@ -762,10 +762,10 @@ const modules = [
         a:"Redraft your Module 1 method claim so that every step is performed by a SINGLE entity (your server), eliminating any user-side or third-party-side steps. Write a short note on what scope you gave up to avoid a divided-infringement problem."
       },
       {
-        tag:"2.3", title:"Claiming AI/ML Architectures",
-        topics:["Architecture claims vs. training-method claims vs. application/output claims","§101 practical-application framing (2024 USPTO AI guidance)"],
-        q:"Under the USPTO's 2024 AI eligibility update, what turns an abstract 'training a model' claim into an eligible 'practical application' claim?",
-        a:"Pick a machine-learning technique. Draft three separate independent claims — one to the model architecture itself, one to the training method, one to a specific real-world application of the trained model's output. For the application claim, explicitly add the three elements the 2024 USPTO guidance calls for: a bounded field of use, a technical-improvement statement, and a non-mental-step limitation."
+        tag:"2.3", title:"Claiming AI/ML Architectures & Trade Secret Boundaries",
+        topics:["Architecture claims vs. training-method claims vs. application/output claims","§101 practical-application framing (2024 USPTO AI guidance)","Trade Secret Election for AI Weights & Data Pipelines (Detectability vs. Disclosure)"],
+        q:"Under the USPTO's 2024 AI eligibility update, what turns an abstract 'training a model' claim into an eligible 'practical application' claim, and when should you withhold model weights as a trade secret instead?",
+        a:"Pick a machine-learning technique. Draft three separate independent claims — one to model architecture, one to training method, one to a specific practical application. For the application claim, add bounded field of use, technical improvement, and non-mental-step limitations. Then write a 1-page memo analyzing whether model weights should be claimed or kept secret based on infringement detectability."
       },
       {
         tag:"2.4", title:"Claim Charts & Element Mapping",
@@ -805,7 +805,7 @@ const modules = [
     ]
   },
   {
-    id:4, num:"MOD 4", title:"Expert / Professional — Business-Integrated Strategy",
+    id:4, num:"MOD 4", title:"Expert / Business-Integrated Strategy",
     subs:[
       {
         tag:"4.1", title:"Claims as Business Assets",
@@ -820,10 +820,10 @@ const modules = [
         a:"Take your Module 1 independent claim and rewrite it in 'EPO style' (two-part form: preamble + characterizing portion introduced by 'characterized in that'). Note the two biggest substantive differences from the U.S. version."
       },
       {
-        tag:"4.3", title:"AI-Assisted Drafting Oversight (Human-in-the-Loop QA)",
-        topics:["Auditing AI-drafted claims for §112 compliance and antecedent errors","Using AI for claim-variant generation while retaining strategic authorship"],
+        tag:"4.3", title:"AI-Assisted Drafting Oversight & Programmatic QA",
+        topics:["Auditing AI-drafted claims for §112 compliance and antecedent errors","Using AI for claim-variant generation while retaining strategic authorship","Programmatic Claim Linting for §112 & Antecedent Basis Verification"],
         q:"If an AI tool drafts 10 claim variants in seconds, what is the one thing it structurally cannot do that you, as the strategist, must still do yourself?",
-        a:"Generate 5 AI-drafted claim variants for one invention (using any LLM). Audit all 5 against a checklist: antecedent basis, §112(b) definiteness, claim differentiation, and whether the claim protects the actual commercial embodiment or only a lab-demo version. Rank them and explain your #1 pick."
+        a:"Generate 5 AI-drafted claim variants for an invention using an LLM. Write a short Python script or regular expression tool to lint the claims for missing antecedent basis (flags 'the X' without prior 'an X'). Audit all 5 against your linter output and rank them by strategic strength."
       },
       {
         tag:"4.4", title:"Capstone — Full Claim Set for a Multi-Modal Agentic AI System",
@@ -845,10 +845,10 @@ const hub = [
   {kind:"News & Commentary", title:"Patently-O", desc:"The leading U.S. patent-law blog — Federal Circuit case commentary, claim-construction disputes.", url:"https://patentlyo.com/"},
   {kind:"News & Commentary", title:"IPWatchdog", desc:"Daily patent, trademark, and policy news with practitioner and judicial commentary.", url:"https://ipwatchdog.com/"},
   {kind:"Free Courses", title:"WIPO Academy — IP eLearning", desc:"Free, self-paced courses from beginner (DL‑101) to advanced patent drafting (DL‑320).", url:"https://www.wipo.int/en/web/wipo-academy/programs/ip-elearning/index"},
-  {kind:"Free Courses", title:"WIPO International Patent Drafting Training Program", desc:"WIPO/FICPI hands-on drafting program with a distance-learning phase and Geneva workshop.", url:"https://welc.wipo.int/ipdtp/"},
+  {kind:"Free Courses", title:"WIPO International Patent Drafting Training Program", desc:"WIPO/FICPI hands-on drafting program with a distance-learning phase and Geneva workshop.", url:"https://www.wipo.int/en/web/patent-drafting/training-program"},
   {kind:"Professional Body", title:"LES USA & Canada", desc:"Leading licensing & IP-monetization professional society — events, standards, deal benchmarks.", url:"https://www.lesusacanada.org/"},
   {kind:"Professional Body", title:"LES International", desc:"Global federation of licensing societies — cross-border deal and standards community.", url:"https://lesi.org/"},
-  {kind:"Official Guidance", title:"USPTO — Subject Matter Eligibility Hub", desc:"Live index of §101 guidance, including the 2024 AI Subject-Matter-Eligibility Update and Examples 47–49.", url:"https://www.uspto.gov/patents/laws/examination-policy/subject-matter-eligibility"},
+  {kind:"Official Guidance", title:"USPTO — Subject Matter Eligibility Hub", desc:"Live index of §101 guidance, including the 2024 AI Subject-Matter-Eligibility Update and Examples 47–49.", url:"https://www.uspto.gov/ip-policy/patent-policy/patent-subject-matter-eligibility"},
   {kind:"Official Guidance", title:"MPEP — Manual of Patent Examining Procedure", desc:"The examiner's own rulebook — the ground truth for how claims are actually read at the USPTO.", url:"https://www.uspto.gov/web/offices/pac/mpep/index.html"}
 ];
 
