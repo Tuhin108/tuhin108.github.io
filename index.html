@@ -3,943 +3,777 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claim 1: The Patent Claims Architecture Curriculum</title>
+<title>Tuhin Singha Roy — Pivot Plan: AI/ML → Sustainability &amp; Climate-Tech AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  :root{
+    --bg:#0F1518;
+    --panel:#171F23;
+    --panel-2:#1D2B2C;
+    --line:#2A3538;
+    --green:#33C48F;
+    --green-dim:#1E8F6B;
+    --green-soft:rgba(51,196,143,0.12);
+    --amber:#E8A33D;
+    --amber-soft:rgba(232,163,61,0.12);
+    --red:#E2685F;
+    --red-soft:rgba(226,104,95,0.12);
+    --paper:#ECEFEE;
+    --ink:#E9EFEE;
+    --ink-soft:#8FA3A8;
+    --ink-faint:#5E7276;
+    --radius:14px;
+    --disp:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+    --body:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible,button:focus-visible,summary:focus-visible{
+    outline:2px solid var(--amber);outline-offset:3px;border-radius:4px;
+  }
+  img,svg{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:600;margin:0;letter-spacing:-0.01em;}
+  .mono{font-family:var(--mono);}
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--green);display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--green);display:inline-block;}
+  .eyebrow .num{color:var(--ink-faint);}
 
-:root{
-  --ink:#0F2438;
-  --ink-2:#16324C;
-  --blueprint:#6FB3DE;
-  --blueprint-dim:#3E6C8A;
-  --brass:#C9A227;
-  --brass-dim:#8E7220;
-  --paper:#F1EAD9;
-  --paper-2:#E7DCC3;
-  --paper-line:#D8C9A6;
-  --ink-text:#1B2A1F;
-  --danger:#9C4A3C;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  background:var(--ink);
-  color:var(--paper);
-  font-family:'Newsreader', serif;
-  line-height:1.5;
-}
-::selection{background:var(--brass);color:var(--ink);}
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,21,24,0.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{display:flex;align-items:center;gap:18px;padding:12px 24px;max-width:1180px;margin:0 auto;}
+  .navrow .brand{font-family:var(--mono);font-size:13px;color:var(--ink);white-space:nowrap;font-weight:500;}
+  .navrow .brand b{color:var(--green);}
+  .navlinks{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+  .navlinks::-webkit-scrollbar{display:none;}
+  .navlinks a{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:0.04em;color:var(--ink-soft);
+    padding:7px 11px;border-radius:8px;white-space:nowrap;text-decoration:none;
+  }
+  .navlinks a:hover{color:var(--ink);background:var(--panel-2);}
 
-/* ---------- utility ---------- */
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
-.eyebrow{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11px;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:var(--blueprint);
-}
-.brass-tag{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11px;
-  letter-spacing:.08em;
-  color:var(--brass);
-  border:1px solid var(--brass-dim);
-  border-radius:2px;
-  padding:2px 8px;
-  display:inline-block;
-}
-a{color:inherit;}
+  /* ---------- HERO ---------- */
+  .hero{padding:64px 0 40px;border-bottom:1px solid var(--line);}
+  .hero h1{font-size:clamp(28px,4.2vw,44px);line-height:1.12;max-width:820px;}
+  .hero h1 .arrow{color:var(--green);padding:0 6px;}
+  .hero .sub{color:var(--ink-soft);font-size:16.5px;max-width:640px;margin-top:16px;}
+  .hero .sub strong{color:var(--ink);}
 
-/* ---------- HERO ---------- */
-.hero{
-  position:relative;
-  padding:88px 0 70px;
-  background:
-    radial-gradient(1200px 500px at 80% -10%, rgba(111,179,222,.15), transparent 60%),
-    linear-gradient(180deg, #0B1D30 0%, var(--ink) 100%);
-  border-bottom:1px solid var(--blueprint-dim);
-  overflow:hidden;
-}
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image:
-    linear-gradient(rgba(111,179,222,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(111,179,222,.06) 1px, transparent 1px);
-  background-size:42px 42px;
-  pointer-events:none;
-}
-.hero-grid{
-  position:relative;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:48px;
-  align-items:center;
-}
-@media (max-width:920px){ .hero-grid{grid-template-columns:1fr;} }
+  .diagram-card{
+    margin-top:36px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 18px 8px;
+  }
+  .diagram-card .cap{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:0.08em;text-transform:uppercase;padding:0 6px 10px;}
+  .flow-line{fill:none;stroke:var(--line);stroke-width:2;}
+  .flow-line.p1{stroke:var(--green-dim);}
+  .flow-line.p2{stroke:var(--amber);}
+  .flow-line.animate{stroke-dasharray:6 7;animation:dash 2.6s linear infinite;}
+  @keyframes dash{to{stroke-dashoffset:-130;}}
+  .node-rect{fill:var(--panel-2);stroke:var(--line);stroke-width:1.4;rx:10;}
+  .node-rect.start{stroke:var(--ink-faint);}
+  .node-rect.gate{fill:var(--green-soft);stroke:var(--green-dim);}
+  .node-rect.end{fill:var(--green-soft);stroke:var(--green);}
+  .node-label{font-family:var(--mono);fill:var(--ink);font-size:12.5px;font-weight:500;}
+  .node-sub{font-family:var(--mono);fill:var(--ink-faint);font-size:10px;}
+  .node-tag{font-family:var(--mono);fill:var(--green);font-size:9.5px;letter-spacing:0.06em;}
+  .node-tag.amber{fill:var(--amber);}
 
-.hero h1{
-  font-family:'Fraunces',serif;
-  font-weight:600;
-  font-size:clamp(34px,4.4vw,58px);
-  line-height:1.04;
-  margin:18px 0 20px;
-  color:#FBF7EC;
-}
-.hero h1 em{
-  font-style:italic;
-  color:var(--brass);
-}
-.hero p.lede{
-  font-size:18px;
-  max-width:56ch;
-  color:#CBD8E3;
-}
-.hero .meta-row{
-  display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;
-}
+  .stats-strip{display:flex;flex-wrap:wrap;gap:28px;margin-top:30px;font-family:var(--mono);}
+  .stats-strip div{font-size:12px;color:var(--ink-faint);letter-spacing:0.03em;}
+  .stats-strip div b{display:block;color:var(--ink);font-size:19px;font-weight:600;margin-bottom:2px;}
 
-/* claim-tree signature diagram */
-.fig{
-  border:1px solid var(--blueprint-dim);
-  background:rgba(15,36,56,.5);
-  border-radius:3px;
-  padding:14px 14px 8px;
-}
-.fig svg{width:100%;height:auto;display:block;}
-.fig-cap{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11px;
-  color:var(--blueprint);
-  letter-spacing:.05em;
-  text-align:center;
-  margin-top:6px;
-  padding-bottom:6px;
-}
-.node-box{fill:rgba(111,179,222,.07);stroke:var(--blueprint);stroke-width:1.2;}
-.node-box.brass{stroke:var(--brass);fill:rgba(201,162,39,.09);}
-.leader{stroke:var(--blueprint-dim);stroke-width:1;}
-.node-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:#DCE8F0;}
-.ref-num{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:var(--brass);}
+  .day-rail{position:relative;margin-top:34px;height:6px;background:var(--line);border-radius:4px;}
+  .day-rail .fill{position:absolute;left:0;top:0;height:100%;width:2%;background:var(--green);border-radius:4px;}
+  .day-marks{display:flex;justify-content:space-between;margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);}
+  .day-marks span.now{color:var(--green);}
 
-/* ---------- SECTION HEADERS ---------- */
-.section{padding:76px 0;}
-.section.alt{background:#0C1D30;}
-.section-head{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  gap:24px;margin-bottom:38px;flex-wrap:wrap;
-  border-bottom:1px solid var(--blueprint-dim);
-  padding-bottom:22px;
-}
-.section-head h2{
-  font-family:'Fraunces',serif;
-  font-weight:600;
-  font-size:clamp(26px,3vw,38px);
-  margin:6px 0 0;
-  color:#FBF7EC;
-}
-.section-head p{margin:8px 0 0;color:#A9BBC9;max-width:60ch;font-size:15px;}
+  /* ---------- SECTIONS ---------- */
+  section.panel{padding:56px 0;border-bottom:1px solid var(--line);}
+  section.panel .head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
+  section.panel h2{font-size:clamp(21px,2.6vw,28px);}
+  section.panel .head p{color:var(--ink-soft);max-width:560px;font-size:14.5px;margin:8px 0 0;}
 
-/* ---------- RANKING / CLAIM SET ---------- */
-.claimset{display:flex;flex-direction:column;gap:14px;}
-.claim{
-  display:grid;
-  grid-template-columns:76px 1fr;
-  gap:20px;
-  background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);
-  border:1px solid var(--blueprint-dim);
-  border-left:3px solid var(--blueprint-dim);
-  border-radius:2px;
-  padding:20px 22px;
-  transition:border-color .2s ease, background .2s ease;
-}
-.claim:hover{border-left-color:var(--brass);background:rgba(201,162,39,.04);}
-.claim.independent{border-left-color:var(--brass);}
-.claim .num{
-  font-family:'Fraunces',serif;
-  font-weight:600;
-  font-size:34px;
-  color:var(--blueprint-dim);
-  line-height:1;
-}
-.claim.independent .num{color:var(--brass);}
-.claim h3{
-  font-family:'Fraunces',serif;
-  font-size:19px;
-  font-weight:600;
-  margin:0 0 6px;
-  color:#FBF7EC;
-}
-.claim .dep-of{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:10.5px;
-  color:var(--blueprint);
-  text-transform:uppercase;
-  letter-spacing:.06em;
-  margin-bottom:8px;
-  display:block;
-}
-.claim p{margin:0;color:#C6D3DE;font-size:15px;}
-.claim .why{
-  margin-top:10px;
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12px;
-  color:var(--brass);
-  border-top:1px dashed var(--blueprint-dim);
-  padding-top:10px;
-}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;}
+  .grid{display:grid;gap:16px;}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr);}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr);}
+  .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+  @media (max-width:900px){.grid.cols-4{grid-template-columns:repeat(2,1fr);}.grid.cols-3{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:640px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
 
-/* ---------- DEEP DIVE / TABS ---------- */
-.deepdive-intro{
-  background:var(--paper);
-  color:var(--ink-text);
-  border-radius:4px;
-  padding:32px 34px;
-  margin-bottom:36px;
-  border:1px solid var(--paper-line);
-}
-.deepdive-intro h3{
-  font-family:'Fraunces',serif;
-  font-size:24px;margin:0 0 10px;
-}
-.deepdive-intro p{margin:0 0 8px;font-size:15.5px;}
-.deepdive-intro .stamp{
-  float:right;
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11px;
-  border:2px solid var(--danger);
-  color:var(--danger);
-  transform:rotate(4deg);
-  padding:6px 10px;
-  border-radius:3px;
-  letter-spacing:.08em;
-}
+  .pill{
+    display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:0.05em;text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:500;white-space:nowrap;
+  }
+  .pill--go{background:var(--green-soft);color:var(--green);}
+  .pill--watch{background:var(--amber-soft);color:var(--amber);}
+  .pill--risk{background:var(--red-soft);color:var(--red);}
+  .pill--info{background:var(--panel-2);color:var(--ink-soft);border:1px solid var(--line);}
 
-.tabs{
-  display:flex;gap:6px;flex-wrap:wrap;
-  border-bottom:1px solid var(--blueprint-dim);
-  margin-bottom:32px;
-}
-.tab-btn{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:12.5px;
-  letter-spacing:.03em;
-  background:transparent;
-  border:1px solid transparent;
-  border-bottom:none;
-  color:#8FA6B8;
-  padding:12px 18px;
-  cursor:pointer;
-  border-radius:3px 3px 0 0;
-}
-.tab-btn .agent-no{color:var(--brass);margin-right:6px;}
-.tab-btn.active{
-  color:#FBF7EC;
-  background:rgba(111,179,222,.08);
-  border-color:var(--blueprint-dim);
-}
-.tab-panel{display:none;}
-.tab-panel.active{display:block;}
+  /* tables */
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th{
+    text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--ink-faint);padding:10px 12px;border-bottom:1px solid var(--line);font-weight:500;
+  }
+  td{padding:13px 12px;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;}
+  td strong,td b{color:var(--ink);font-weight:600;}
+  tr:last-child td{border-bottom:none;}
+  .table-wrap{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto;}
+  .table-wrap table{min-width:640px;}
 
-/* module accordion */
-.module{
-  border:1px solid var(--blueprint-dim);
-  border-radius:3px;
-  margin-bottom:16px;
-  overflow:hidden;
-  background:rgba(255,255,255,.015);
-}
-.module-head{
-  display:flex;align-items:center;gap:16px;
-  padding:18px 22px;
-  cursor:pointer;
-  user-select:none;
-}
-.module-head:hover{background:rgba(111,179,222,.05);}
-.module-head .mnum{
-  font-family:'IBM Plex Mono',monospace;
-  color:var(--brass);
-  font-size:13px;
-  border:1px solid var(--brass-dim);
-  border-radius:2px;
-  padding:3px 9px;
-  flex-shrink:0;
-}
-.module-head h4{
-  font-family:'Fraunces',serif;
-  font-size:19px;font-weight:600;
-  margin:0;color:#FBF7EC;flex:1;
-}
-.module-head .chev{
-  font-family:'IBM Plex Mono',monospace;
-  color:var(--blueprint);
-  transition:transform .2s ease;
-  font-size:14px;
-}
-.module.open .chev{transform:rotate(90deg);}
-.module-body{
-  max-height:0;
-  overflow:hidden;
-  transition:max-height .3s ease;
-  border-top:1px solid transparent;
-}
-.module.open .module-body{border-top:1px solid var(--blueprint-dim);}
+  /* rank number badges */
+  .rankno{
+    display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:7px;
+    background:var(--panel-2);color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:600;margin-right:8px;border:1px solid var(--line);
+  }
 
-.subhead{
-  padding:20px 22px 20px 60px;
-  border-bottom:1px solid rgba(111,179,222,.12);
-}
-.subhead:last-child{border-bottom:none;}
-.subhead h5{
-  font-family:'Fraunces',serif;
-  font-size:16px;font-weight:600;
-  margin:0 0 8px;color:#EDE3CC;
-}
-.subhead h5 .tag{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:10px;color:var(--blueprint);
-  margin-right:8px;
-}
-.subtopics{
-  margin:0 0 12px;padding-left:18px;
-  font-size:13.5px;color:#A9BBC9;
-}
-.subtopics li{margin-bottom:3px;}
+  /* Roadmap timeline */
+  .timeline{position:relative;padding-left:26px;}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .tl-item{position:relative;padding-bottom:28px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:"";position:absolute;left:-26px;top:4px;width:14px;height:14px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--green);
+  }
+  .tl-item h4{font-family:var(--mono);font-size:13px;color:var(--green);letter-spacing:0.04em;margin-bottom:6px;text-transform:uppercase;}
+  .tl-item .body{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;}
+  .tl-item ul{margin:0;padding-left:18px;color:var(--ink-soft);font-size:14px;}
+  .tl-item li{margin-bottom:5px;}
+  .tl-item li:last-child{margin-bottom:0;}
 
-.assignment-box{
-  background:rgba(111,179,222,.06);
-  border-left:2px solid var(--blueprint);
-  border-radius:0 3px 3px 0;
-  padding:12px 16px;
-  margin-top:10px;
-}
-.assignment-box .q{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11px;color:var(--brass);
-  letter-spacing:.05em;
-  margin-bottom:4px;
-}
-.assignment-box p{margin:0 0 8px;font-size:14px;color:#D6E0E8;}
-.assignment-box p:last-child{margin-bottom:0;}
-.assignment-box .a-label{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11px;color:var(--blueprint);
-  letter-spacing:.05em;
-  margin-bottom:4px;
-}
+  /* Courses */
+  .course-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;border-left:3px solid var(--green);display:flex;flex-direction:column;gap:10px;}
+  .course-card.tier-optional{border-left-color:var(--amber);}
+  .course-card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;}
+  .course-card h4{font-size:15px;font-family:var(--body);font-weight:600;color:var(--ink);}
+  .course-card .meta{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);display:flex;gap:14px;flex-wrap:wrap;}
+  .course-card p{font-size:13px;color:var(--ink-soft);margin:0;}
+  .btn{
+    font-family:var(--mono);font-size:12px;letter-spacing:0.03em;color:var(--bg);background:var(--green);
+    padding:8px 14px;border-radius:8px;display:inline-flex;align-items:center;gap:6px;font-weight:600;
+    margin-top:auto;align-self:flex-start;
+  }
+  .btn:hover{background:#48d69f;text-decoration:none;}
+  .btn.outline{background:transparent;color:var(--green);border:1px solid var(--green-dim);}
 
-.link-row{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;}
-.link-chip{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11.5px;
-  color:#DCE8F0;
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--blueprint-dim);
-  border-radius:2px;
-  padding:5px 10px;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-}
-.link-chip:hover{border-color:var(--brass);color:var(--brass);}
-.link-chip::before{content:"↗";font-size:11px;}
+  /* LinkedIn section */
+  .headline-opt{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:var(--mono);font-size:12.5px;color:var(--ink);margin-bottom:10px;}
+  .headline-opt .tag{font-family:var(--mono);font-size:10px;color:var(--ink-faint);display:block;margin-bottom:4px;}
+  .about-box{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;font-size:14.5px;color:var(--ink-soft);}
+  .about-box p{margin:0 0 14px;}
+  .about-box p:last-child{margin-bottom:0;}
+  .tagcloud{display:flex;flex-wrap:wrap;gap:8px;}
+  .tagcloud span{
+    font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);background:var(--panel-2);
+    border:1px solid var(--line);padding:5px 10px;border-radius:7px;
+  }
 
-/* resource cards (agent 2 module-level) */
-.resource-module{
-  border:1px solid var(--blueprint-dim);
-  border-radius:3px;
-  padding:22px 24px;
-  margin-bottom:16px;
-}
-.resource-module h4{
-  font-family:'Fraunces',serif;font-size:18px;margin:0 0 4px;color:#FBF7EC;
-}
-.resource-module .rsub{
-  font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blueprint);
-  margin-bottom:14px;display:block;
-}
+  /* checklist */
+  .checklist{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:6px;}
+  .chk-item{
+    display:flex;align-items:center;gap:12px;padding:13px 14px;border-bottom:1px solid var(--line);cursor:pointer;
+  }
+  .chk-item:last-child{border-bottom:none;}
+  .chk-box{
+    width:20px;height:20px;border:1.6px solid var(--ink-faint);border-radius:5px;flex:none;
+    display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:13px;color:var(--bg);
+  }
+  .chk-item.done .chk-box{background:var(--green);border-color:var(--green);}
+  .chk-item.done .chk-box::after{content:"✓";}
+  .chk-item span.label{font-size:14.5px;color:var(--ink);}
+  .chk-item.done span.label{color:var(--ink-faint);text-decoration:line-through;}
 
-/* hub cards */
-.hub-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:16px;
-}
-.hub-card{
-  border:1px solid var(--blueprint-dim);
-  border-radius:3px;
-  padding:20px;
-  background:rgba(255,255,255,.015);
-}
-.hub-card .kind{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:10px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--brass);margin-bottom:8px;display:block;
-}
-.hub-card h5{
-  font-family:'Fraunces',serif;font-size:17px;margin:0 0 8px;color:#FBF7EC;
-}
-.hub-card p{font-size:13.5px;color:#A9BBC9;margin:0 0 12px;}
-.hub-card a.visit{
-  font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blueprint);
-  text-decoration:none;border-bottom:1px solid var(--blueprint-dim);
-}
-.hub-card a.visit:hover{color:var(--brass);border-color:var(--brass);}
+  /* alerts */
+  .alert{
+    display:flex;gap:14px;padding:16px 18px;border-radius:var(--radius);border:1px solid var(--line);
+    background:var(--panel);align-items:flex-start;
+  }
+  .alert .mark{font-family:var(--mono);font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;flex:none;margin-top:2px;}
+  .alert.watch{border-color:rgba(232,163,61,0.35);}
+  .alert.watch .mark{background:var(--amber-soft);color:var(--amber);}
+  .alert.risk{border-color:rgba(226,104,95,0.35);}
+  .alert.risk .mark{background:var(--red-soft);color:var(--red);}
+  .alert p{margin:0;font-size:14px;color:var(--ink-soft);}
+  .alert strong{color:var(--ink);}
 
-footer{
-  padding:40px 0 60px;
-  border-top:1px solid var(--blueprint-dim);
-  font-family:'IBM Plex Mono',monospace;
-  font-size:11.5px;color:#7189A0;
-}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  /* final summary */
+  .summary-card{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:var(--radius);padding:32px;}
+  .summary-card h3{font-size:20px;margin-bottom:14px;}
+  .summary-card ol{padding-left:20px;color:var(--ink-soft);font-size:14.5px;}
+  .summary-card li{margin-bottom:8px;}
+  .summary-card li::marker{font-family:var(--mono);color:var(--green);font-weight:600;}
 
-@media(max-width:640px){
-  .claim{grid-template-columns:46px 1fr;padding:16px;}
-  .claim .num{font-size:24px;}
-  .subhead{padding:18px 16px;}
-}
+  footer{padding:36px 0 60px;}
+  footer p{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);max-width:640px;}
+
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease, transform .5s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    .flow-line.animate{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    header.nav{display:none;}
+    body{background:#fff;color:#111;}
+    .hero,.panel,footer{border-color:#ccc;}
+    .card,.course-card,.table-wrap,.about-box,.tl-item .body,.checklist,.alert,.summary-card,.diagram-card,.headline-opt,.tagcloud span{
+      background:#fff !important;border-color:#ccc !important;color:#111 !important;box-shadow:none !important;
+    }
+    td,th,.about-box,.tl-item ul,p{color:#222 !important;}
+    a{color:#0a6b4c !important;}
+    .btn{background:#0a6b4c !important;color:#fff !important;}
+    section.panel{page-break-inside:avoid;padding:28px 0;}
+    a.btn::after{content:" → " attr(href);font-size:10px;word-break:break-all;}
+  }
 </style>
 </head>
 <body>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Ministry of Instruction — Innovation &amp; IP Strategy Track</span>
-      <h1>The tech-legal skill that <em>ages backward</em>.</h1>
-      <p class="lede">A forecast-ranked map of the intellectual-property skills that survive AI automation — followed by a full four-agent curriculum, basic to expert, for the one at the top: <strong>Patent Claims Architecture &amp; Strategic Scope Engineering.</strong></p>
-      <div class="meta-row">
-        <span class="brass-tag">FIG. 1 — CLAIM ARCHITECTURE</span>
-        <span class="brass-tag">10-SKILL FORECAST</span>
-        <span class="brass-tag">4-AGENT SYLLABUS</span>
-      </div>
-    </div>
-    <div class="fig">
-      <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
-        <!-- system architecture box -->
-        <rect class="node-box" x="30" y="20" width="150" height="46" rx="2"/>
-        <text class="node-label" x="42" y="40">SYSTEM / AI</text>
-        <text class="node-label" x="42" y="54">ARCHITECTURE</text>
-        <text class="ref-num" x="184" y="46">10</text>
+<header class="nav">
+  <div class="navrow">
+    <div class="brand">TUHIN <b>/// PIVOT-OS</b></div>
+    <nav class="navlinks">
+      <a href="#roles">01 Roles</a>
+      <a href="#day30">02 30-Day</a>
+      <a href="#day60">03 60-Day</a>
+      <a href="#skills">04 Skills Gap</a>
+      <a href="#courses">05 Courses</a>
+      <a href="#projects">06 Projects</a>
+      <a href="#linkedin">07 LinkedIn</a>
+      <a href="#apply">08 Applications</a>
+      <a href="#today">09 Today</a>
+      <a href="#risks">10 Risks</a>
+      <a href="#summary">11 Summary</a>
+    </nav>
+  </div>
+</header>
 
-        <!-- arrow down -->
-        <line class="leader" x1="105" y1="66" x2="105" y2="100"/>
-        <polygon points="105,104 100,96 110,96" fill="var(--blueprint)"/>
+<main class="wrap">
 
-        <!-- independent claim box -->
-        <rect class="node-box brass" x="30" y="106" width="150" height="52" rx="2"/>
-        <text class="node-label" x="42" y="127">INDEPENDENT</text>
-        <text class="node-label" x="42" y="141">CLAIM (BROAD)</text>
-        <text class="ref-num" x="184" y="132">12</text>
+  <section class="hero">
+    <div class="eyebrow">Career routing plan · generated 27 Jul 2026</div>
+    <h1>AI/ML Generalist <span class="arrow">→</span> Sustainability &amp; Climate-Tech AI</h1>
+    <p class="sub">A two-lane, evidence-backed plan to convert <strong>15+ shipped projects</strong> and <strong>5 internships</strong> into interviews within <strong>30–60 days</strong> — built from your CVs, profile.json, and current hiring data, not generic advice.</p>
 
-        <!-- branch lines to 3 dependent claims -->
-        <line class="leader" x1="105" y1="158" x2="105" y2="185"/>
-        <line class="leader" x1="105" y1="185" x2="260" y2="185"/>
-        <line class="leader" x1="260" y1="185" x2="260" y2="205"/>
-        <line class="leader" x1="105" y1="185" x2="105" y2="205"/>
-        <line class="leader" x1="105" y1="240" x2="105" y2="205"/>
-        <line class="leader" x1="105" y1="290" x2="105" y2="205" stroke-dasharray="2 3"/>
+    <div class="diagram-card reveal">
+      <div class="cap">Signature asset applied to your own career: a confidence-routed decision, same shape as your banking-intent cascade</div>
+      <svg viewBox="0 0 1000 300" role="img" aria-label="Routing diagram: AI/ML generalist routes through a confidence gate into two parallel paths, ESG Data and Reporting, and Climate-Tech AI, converging on Hired in 30 to 60 days">
+        <path class="flow-line" d="M180,150 L205,150"></path>
+        <path class="flow-line p1 animate" d="M285,138 Q380,60 470,72"></path>
+        <path class="flow-line p2 animate" d="M285,162 Q380,240 470,228"></path>
+        <path class="flow-line p1" d="M700,72 Q760,90 800,135"></path>
+        <path class="flow-line p2" d="M700,228 Q760,210 800,165"></path>
 
-        <rect class="node-box" x="30" y="206" width="150" height="34" rx="2"/>
-        <text class="node-label" x="40" y="227">DEP. CLAIM — NARROW A</text>
+        <rect class="node-rect start" x="10" y="118" width="170" height="64" rx="10"></rect>
+        <text class="node-label" x="26" y="145">AI/ML GENERALIST</text>
+        <text class="node-sub" x="26" y="163">B.Tech CSE, 2026 · fresher</text>
 
-        <rect class="node-box" x="30" y="248" width="150" height="34" rx="2"/>
-        <text class="node-label" x="40" y="269">DEP. CLAIM — NARROW B</text>
+        <g transform="translate(245,150)">
+          <rect class="node-rect gate" x="-40" y="-32" width="80" height="64" rx="12"></rect>
+          <text class="node-label" x="-33" y="-4" style="font-size:10.5px;">CONFIDENCE</text>
+          <text class="node-label" x="-24" y="10" style="font-size:10.5px;">ROUTER</text>
+          <text class="node-sub" x="-30" y="24">evidence fit</text>
+        </g>
 
-        <rect class="node-box" x="185" y="206" width="150" height="34" rx="2"/>
-        <text class="node-label" x="195" y="227">DEP. CLAIM — FTO GUARD</text>
+        <rect class="node-rect" x="470" y="40" width="230" height="64" rx="10" style="stroke:var(--green-dim);"></rect>
+        <text class="node-tag" x="486" y="58">PATH 1 · HIGH VOLUME</text>
+        <text class="node-label" x="486" y="75">ESG Data &amp; Reporting</text>
+        <text class="node-sub" x="486" y="91">BRSR-driven demand</text>
 
-        <rect class="node-box" x="185" y="248" width="150" height="34" rx="2"/>
-        <text class="node-label" x="195" y="269">DEP. CLAIM — SEP READ</text>
+        <rect class="node-rect" x="470" y="196" width="230" height="64" rx="10" style="stroke:var(--amber);"></rect>
+        <text class="node-tag amber" x="486" y="214">PATH 2 · BEST EVIDENCE</text>
+        <text class="node-label" x="486" y="231">Climate-Tech / AgriTech AI</text>
+        <text class="node-sub" x="486" y="247">4 deployed agri-AI projects</text>
 
-        <!-- seal -->
-        <circle cx="330" cy="320" r="30" fill="none" stroke="var(--brass)" stroke-width="1.4" stroke-dasharray="3 2"/>
-        <text class="ref-num" x="308" y="316" fill="var(--brass)" font-size="9">CLAIM 1</text>
-        <text class="ref-num" x="304" y="328" fill="var(--brass)" font-size="9">OF 10</text>
+        <rect class="node-rect end" x="800" y="115" width="185" height="70" rx="10"></rect>
+        <text class="node-label" x="820" y="145">HIRED</text>
+        <text class="node-sub" x="820" y="163">30–60 days</text>
       </svg>
-      <div class="fig-cap">FIG. 1 — ARCHITECTURE → INDEPENDENT CLAIM → DEPENDENT TREE</div>
     </div>
-  </div>
-</section>
 
-<!-- ================= RANKING AS CLAIM SET ================= -->
-<section class="section" id="ranking">
-  <div class="wrap">
-    <div class="section-head">
+    <div class="stats-strip mono">
+      <div><b>1.5+ yrs</b>experience</div>
+      <div><b>15+</b>projects shipped</div>
+      <div><b>5</b>internships</div>
+      <div><b>2026</b>B.Tech CSE (AI&amp;ML)</div>
+      <div><b>0</b>new projects needed</div>
+    </div>
+
+    <div class="day-rail"><div class="fill"></div></div>
+    <div class="day-marks">
+      <span class="now">DAY 0 — today</span>
+      <span>DAY 30 — checkpoint</span>
+      <span>DAY 60 — checkpoint</span>
+    </div>
+  </section>
+
+  <!-- 01 ROLES -->
+  <section class="panel" id="roles">
+    <div class="head">
       <div>
-        <span class="eyebrow">Forecast · Written as a Claim Set</span>
-        <h2>The ten skills a model can't file for you</h2>
-      </div>
-      <p>AI compresses execution — searching, summarizing, first-draft claim language. What's left standing is judgment under ambiguity, multi-audience reasoning (examiner, competitor, judge, investor), and accountability. Below, Claim 1 is the broadest and most foundational; Claims 2–10 depend from it, each adding a narrower commercial capability.</p>
-    </div>
-
-    <div class="claimset">
-      <div class="claim independent">
-        <div class="num">1</div>
-        <div>
-          <h3>Patent Claims Architecture &amp; Strategic Scope Engineering</h3>
-          <p>Translating a live, changing system — an agentic pipeline, a multi-modal model, a distributed architecture — into claim language that is simultaneously broad enough to matter, narrow enough to survive prior art, and durable enough to hold up in litigation years later.</p>
-          <div class="why">Why it survives: requires holding one technical mental model while simulating three adversarial readers (examiner, infringer's counsel, judge) at once — a sustained, stateful, multi-perspective judgment task, not a retrieval or summarization task.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">2</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>Freedom-to-Operate &amp; Design-Around Strategy</h3>
-          <p>Not the clearance search itself (AI does that well now) — the judgment call on which cleared risks to accept, engineer around, license, or fight, made under real commercial deadlines.</p>
-          <div class="why">Why it survives: the output is a risk-tolerance decision tied to a specific business's appetite, not a factual answer.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">3</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>IP Portfolio Valuation, Monetization &amp; Deal Structuring</h3>
-          <p>Turning a stack of patents into a negotiable number — royalty stacking, M&amp;A diligence pricing, IP-backed financing, licensing leverage.</p>
-          <div class="why">Why it survives: valuation is a negotiation position, not a formula; the "right" number depends on who's across the table.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">4</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>Patent Landscape Mining &amp; Whitespace Intelligence</h3>
-          <p>Pattern-finding across thousands of claims to locate genuinely open, defensible ground — the strategic layer above a prior-art search.</p>
-          <div class="why">Why it survives: whitespace is a judgment about commercial relevance, not just claim-language absence.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">5</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>AI/Algorithm-Specific Eligibility Engineering (§101)</h3>
-          <p>Architecting claims and specifications so software/AI inventions survive the Alice/Mayo framework and the USPTO's fast-moving 2024–2025 AI eligibility guidance.</p>
-          <div class="why">Why it survives: the doctrine itself is a moving target — durable skill is tracking and re-engineering around it, not memorizing today's rule.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">6</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>Standard-Essential Patents (SEP) &amp; FRAND Strategy</h3>
-          <p>Positioning claims and portfolios inside evolving technical standards — 5G/6G, AI-model interoperability, codecs — for negotiating leverage.</p>
-          <div class="why">Why it survives: standards politics and FRAND valuation disputes require reading committee dynamics, not just claim text.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">7</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>Trade Secret vs. Patent Strategic Election</h3>
-          <p>Deciding invention-by-invention whether disclosure (patent) or secrecy (trade secret) protects more value — increasingly sharp for training data, model weights, and inference pipelines.</p>
-          <div class="why">Why it survives: an irreversible bet made under incomplete information about a competitor's future moves.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">8</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>Cross-Border Filing &amp; Global Prosecution Strategy</h3>
-          <p>Sequencing PCT and national-phase filings, budget, and claim-style adjustments across USPTO, EPO, CNIPA, and JPO practice.</p>
-          <div class="why">Why it survives: requires live coordination across jurisdictions with different examiners, timelines, and incentives.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">9</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>IP Due Diligence for M&amp;A / VC Transactions</h3>
-          <p>Auditing a target's IP stack for enforceability gaps, inventorship defects, and encumbrances — under a deal clock, not an academic one.</p>
-          <div class="why">Why it survives: the deliverable is a go/no-go judgment with real money and real deadlines attached.</div>
-        </div>
-      </div>
-
-      <div class="claim">
-        <div class="num">10</div>
-        <div>
-          <span class="dep-of">Wherein Claim 1 further comprises —</span>
-          <h3>Litigation-Informed Drafting</h3>
-          <p>Writing today's claims with tomorrow's Markman hearing already in mind — prosecution history estoppel, claim construction foresight, doctrine-of-equivalents preservation.</p>
-          <div class="why">Why it survives: requires forecasting how a court will misread your own words in an adversarial context years from now.</div>
-        </div>
+        <div class="eyebrow"><span class="num">01</span> Target roles</div>
+        <h2>Ranked by fresher-hiring reality, not theory</h2>
+        <p>Green AI / Responsible AI is <strong style="color:var(--ink)">not a standalone job title</strong> in current postings — it's your differentiator inside these roles, via the routing-cascade paper.</p>
       </div>
     </div>
-  </div>
-</section>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Rank</th><th>Role</th><th>Fresher likelihood</th><th>Competition</th><th>Growth</th><th>Why it fits you</th></tr>
+        <tr>
+          <td><span class="rankno">1</span></td>
+          <td><b>Sustainability / ESG Data Analyst</b></td>
+          <td><span class="pill pill--go">High</span></td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>ISS ESG / ISS STOXX explicitly hires ESG analysts at 0–2 yrs; matches your RAG + n8n data-pipeline skills</td>
+        </tr>
+        <tr>
+          <td><span class="rankno">2</span></td>
+          <td><b>Climate-Tech / AgriTech AI Engineer</b></td>
+          <td><span class="pill pill--watch">Medium</span></td>
+          <td>Low–Med</td>
+          <td>High</td>
+          <td>Your strongest evidence: 4 deployed crop/plant-disease projects; junior ML/CV roles pay ₹7–14 LPA at funded startups</td>
+        </tr>
+        <tr>
+          <td><span class="rankno">3</span></td>
+          <td><b>ESG Tech Analyst — Big 4 / IT-services practice</b></td>
+          <td><span class="pill pill--go">High (volume)</span></td>
+          <td>Med–High</td>
+          <td>Med–High</td>
+          <td>TCS Digital ESG, Infosys EcoWatch, Wipro Sustainability, IBM Envizi all hire freshers at scale into these practices</td>
+        </tr>
+        <tr>
+          <td><span class="rankno">4</span></td>
+          <td><b>Carbon / Climate-Risk Data Analyst</b></td>
+          <td><span class="pill pill--watch">Low–Med</span></td>
+          <td>Low</td>
+          <td>High</td>
+          <td>Varaha (Gurugram) hires for GHG/MRV modeling in Python/R; Boomitra runs satellite+AI MRV</td>
+        </tr>
+        <tr>
+          <td><span class="rankno">5</span></td>
+          <td><b>Backup: General AI/ML or Data Analyst</b></td>
+          <td><span class="pill pill--go">Very high</span></td>
+          <td>High</td>
+          <td>Medium</td>
+          <td>Safety net only — activate if Paths 1–2 haven't produced 3+ interviews by Day 45</td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
-<!-- ================= DEEP DIVE ================= -->
-<section class="section alt" id="deepdive">
-  <div class="wrap">
-    <div class="section-head">
+  <!-- 02 30-DAY -->
+  <section class="panel" id="day30">
+    <div class="head">
       <div>
-        <span class="eyebrow">Full Curriculum — Claim 1</span>
-        <h2>Patent Claims Architecture &amp; Strategic Scope Engineering</h2>
+        <div class="eyebrow"><span class="num">02</span> 30-day roadmap</div>
+        <h2>Fix the foundation, apply from week one</h2>
+        <p>Applications start in Week 1 — real fresher postings accept 0–2 YOE today. Learning runs in parallel, never gates applying.</p>
       </div>
-      <p>Built by four sequential agents: Structure → Resources → Assignments → Continuous-Learning Hub. Every link below was verified against a live source before inclusion.</p>
     </div>
-
-    <div class="deepdive-intro">
-      <span class="stamp">Basic → Expert</span>
-      <h3>How to use this curriculum</h3>
-      <p>Work module by module, 0 through 4. Each subheading in the <strong>Structure</strong> tab has a matching entry in <strong>Assignments</strong> — do the reading (<strong>Resources</strong>), then complete the assignment before moving on. Module 4 ends in a single capstone claim set.</p>
-      <p>Estimated pace for a working professional: 6–10 hours/week, 14–18 weeks end to end.</p>
-    </div>
-
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="structure"><span class="agent-no">Agent 1</span>Structure</button>
-      <button class="tab-btn" data-tab="resources"><span class="agent-no">Agent 2</span>Resources</button>
-      <button class="tab-btn" data-tab="assignments"><span class="agent-no">Agent 3</span>Assignments</button>
-      <button class="tab-btn" data-tab="hub"><span class="agent-no">Agent 4</span>Continuous-Learning Hub</button>
-    </div>
-
-    <!-- ---------- AGENT 1: STRUCTURE ---------- -->
-    <div class="tab-panel active" id="panel-structure">
-      <div id="structure-modules"></div>
-    </div>
-
-    <!-- ---------- AGENT 2: RESOURCES ---------- -->
-    <div class="tab-panel" id="panel-resources">
-
-      <div class="resource-module">
-        <h4>Module 0 — Foundational Literacy</h4>
-        <span class="rsub">Prerequisite layer before touching a claim</span>
-        <div class="link-row">
-          <a class="link-chip" href="https://www.wipo.int/en/web/wipo-academy/programs/ip-elearning/index" target="_blank">WIPO Academy — free IP eLearning (DL‑101, DL‑301)</a>
-          <a class="link-chip" href="https://www.uspto.gov/ip-policy/patent-policy/patent-subject-matter-eligibility" target="_blank">USPTO — Subject Matter Eligibility hub</a>
-          <a class="link-chip" href="https://www.uspto.gov/web/offices/pac/mpep/index.html" target="_blank">USPTO — Manual of Patent Examining Procedure (MPEP)</a>
-          <a class="link-chip" href="https://www.wipo.int/en/web/patent-drafting" target="_blank">WIPO — Patent Drafting program overview</a>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <h4>Week 1 — Foundation + first applications</h4>
+        <div class="body">
+          <ul>
+            <li>Pick one positioning everywhere (see §07); fix CGPA + email inconsistencies (see §10)</li>
+            <li>Add the 2 missing projects — Financial Intent Routing, Farmer-Friend — to profile.json / portfolio</li>
+            <li>Rewrite into one master resume; start + finish the free Microsoft/LinkedIn "Career Essentials in Sustainable Tech" cert (~4 hrs)</li>
+            <li>Apply: ISS ESG, Suntec, Apex Group, Quantum MF <em>and</em> Cropin, Intello Labs, Varaha, Boomitra, SatSure</li>
+          </ul>
         </div>
       </div>
-
-      <div class="resource-module">
-        <h4>Module 1 — Basic Claim Drafting</h4>
-        <span class="rsub">Grammar, categories, first independent claims</span>
-        <div class="link-row">
-          <a class="link-chip" href="https://www.wipo.int/en/web/patent-drafting/training-program" target="_blank">WIPO — International Patent Drafting Training Program</a>
-          <a class="link-chip" href="https://www.uspto.gov/web/offices/pac/mpep/s2111.html" target="_blank">MPEP §2111 — Claim Interpretation / Broadest Reasonable Interpretation</a>
-          <a class="link-chip" href="https://ppubs.uspto.gov/pubwebapp/" target="_blank">USPTO Patent Public Search — read real issued claims</a>
-          <a class="link-chip" href="https://www.youtube.com/user/USPTOvideo" target="_blank">USPTO official YouTube — search "claim drafting" workshops</a>
+      <div class="tl-item reveal">
+        <h4>Week 2 — Build the differentiator</h4>
+        <div class="body">
+          <ul>
+            <li>Finish Oxford Saïd "AI and Sustainability: Leading Responsibly" (free audit)</li>
+            <li>Rewrite the Financial Intent Routing bullet (§06) and publish it as a short LinkedIn post — your best "Green AI" evidence, currently invisible</li>
+            <li>Register for AWS Certified Cloud Practitioner ($100 / ~₹9,800)</li>
+            <li>Apply broadly to TCS, Infosys, Wipro, Deloitte, EY, KPMG, PwC, IBM</li>
+          </ul>
         </div>
       </div>
-
-      <div class="resource-module">
-        <h4>Module 2 — Intermediate Claim Scope Engineering</h4>
-        <span class="rsub">Breadth trade-offs, distributed systems, AI claiming, §101 &amp; Trade Secret bounds</span>
-        <div class="link-row">
-          <a class="link-chip" href="https://www.uspto.gov/web/offices/pac/mpep/s2173.html" target="_blank">MPEP §2173 — Definiteness Requirement</a>
-          <a class="link-chip" href="https://www.federalregister.gov/documents/2024/07/17/2024-15377/2024-guidance-update-on-patent-subject-matter-eligibility-including-on-artificial-intelligence" target="_blank">Federal Register — 2024 AI Subject-Matter-Eligibility Guidance Update</a>
-          <a class="link-chip" href="https://www.uspto.gov/sites/default/files/documents/ai-sme-update-2024.pdf" target="_blank">USPTO — AI Eligibility Examples 47–49 (PDF)</a>
-          <a class="link-chip" href="https://patents.google.com/" target="_blank">Google Patents — build element-by-element claim charts</a>
+      <div class="tl-item reveal">
+        <h4>Week 3 — Volume + interview prep</h4>
+        <div class="body">
+          <ul>
+            <li>Target 40–60 cumulative applications</li>
+            <li>Sit the AWS CCP exam</li>
+            <li>Prepare one STAR story per flagship project (crop-disease CV, routing cascade, RAG pipeline)</li>
+            <li>Start 1–2 networking messages/day (template in §07)</li>
+          </ul>
         </div>
       </div>
-
-      <div class="resource-module">
-        <h4>Module 3 — Advanced Portfolio-Level Strategy</h4>
-        <span class="rsub">Continuations, design-arounds, litigation-aware drafting, SEP/FRAND</span>
-        <div class="link-row">
-          <a class="link-chip" href="https://patentlyo.com/" target="_blank">Patently-O — leading U.S. patent-law blog (claim construction, Fed. Cir. cases)</a>
-          <a class="link-chip" href="https://ipwatchdog.com/" target="_blank">IPWatchdog — prosecution, litigation &amp; policy commentary</a>
-          <a class="link-chip" href="https://www.lesusacanada.org/" target="_blank">LES USA &amp; Canada — licensing &amp; SEP practice resources</a>
-          <a class="link-chip" href="https://ppubs.uspto.gov/pubwebapp/" target="_blank">Patent Public Search — trace continuation/divisional families</a>
+      <div class="tl-item reveal">
+        <h4>Week 4 — Checkpoint</h4>
+        <div class="body">
+          <ul>
+            <li>Follow up on every pending application</li>
+            <li><strong style="color:var(--ink)">Trigger:</strong> fewer than 3 first-round interviews? Activate the backup lane (§03) — add volume, don't drop Paths 1–2</li>
+            <li>Review what's converting: which role, which company type, which channel</li>
+          </ul>
         </div>
       </div>
-
-      <div class="resource-module">
-        <h4>Module 4 — Expert / Business-Integrated Strategy</h4>
-        <span class="rsub">Cross-jurisdiction, AI-assisted drafting oversight &amp; Programmatic QA, capstone</span>
-        <div class="link-row">
-          <a class="link-chip" href="https://patentscope.wipo.int/" target="_blank">WIPO PATENTSCOPE — cross-jurisdiction PCT/national search</a>
-          <a class="link-chip" href="https://worldwide.espacenet.com/" target="_blank">Espacenet (EPO) — compare EPO vs. USPTO claim style</a>
-          <a class="link-chip" href="https://lesi.org/" target="_blank">LES International — global licensing network</a>
-          <a class="link-chip" href="https://www.lens.org/" target="_blank">Lens.org — portfolio &amp; whitespace analytics for the capstone</a>
-        </div>
-      </div>
-
     </div>
+  </section>
 
-    <!-- ---------- AGENT 3: ASSIGNMENTS ---------- -->
-    <div class="tab-panel" id="panel-assignments">
-      <div id="assignment-modules"></div>
+  <!-- 03 60-DAY -->
+  <section class="panel" id="day60">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">03</span> 60-day roadmap</div>
+        <h2>Sustain the pipeline, widen only if needed</h2>
+      </div>
     </div>
-
-    <!-- ---------- AGENT 4: HUB ---------- -->
-    <div class="tab-panel" id="panel-hub">
-      <div class="hub-grid" id="hub-grid"></div>
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h4 class="mono" style="color:var(--green);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:10px;">Days 31–45</h4>
+        <ul style="margin:0;padding-left:18px;color:var(--ink-soft);font-size:14px;">
+          <li>Continue the application/interview cycle from Week 5</li>
+          <li>If pursuing one optional cert, register now (GARP SCR or CFA SIC — pick one, see §05)</li>
+          <li>Keep 1–2 networking touches/day; ask 2nd-degree contacts for referrals</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h4 class="mono" style="color:var(--amber);font-size:13px;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:10px;">Days 46–60</h4>
+        <ul style="margin:0;padding-left:18px;color:var(--ink-soft);font-size:14px;">
+          <li><strong style="color:var(--ink)">Backup plan:</strong> still &lt;3 interviews? Broaden — in parallel, not instead — to general AI/ML or Data Analyst fresher roles at TCS/Infosys/Wipro/Accenture, where you already over-qualify</li>
+          <li>Widen geography/remote scope if not already open to it</li>
+          <li>Day-60 checkpoint: which lane converted, and double down there</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- 04 SKILLS GAP -->
+  <section class="panel" id="skills">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">04</span> Skills gap matrix</div>
+        <h2>What's already strong vs. what to close</h2>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Area</th><th>Current level</th><th>Target</th><th>Closing action</th></tr>
+        <tr><td><b>Python / ML / DL</b></td><td>Strong — 15+ projects</td><td>No change needed</td><td><span class="pill pill--go">Nothing to do</span></td></tr>
+        <tr><td><b>Cloud (AWS)</b></td><td>Hands-on via 3 internships, cert status unclear</td><td>Verified AWS CCP holder</td><td><span class="pill pill--go">Sit CLF-C02 exam, §05</span></td></tr>
+        <tr><td><b>Document/RAG automation</b></td><td>Strong — DocSummarizer, Askademia, Deep Research Assistant</td><td>Reframed as ESG report automation</td><td><span class="pill pill--go">Rewrite framing only, §06</span></td></tr>
+        <tr><td><b>AgriTech / CV domain evidence</b></td><td>Strong — 4 deployed projects</td><td>Positioned as climate-smart agriculture AI</td><td><span class="pill pill--go">Rewrite framing only, §06</span></td></tr>
+        <tr><td><b>Sustainability / ESG literacy</b></td><td><span class="pill pill--risk">Gap</span> — no formal exposure yet</td><td>Working fluency in ESG/BRSR basics</td><td><span class="pill pill--go">Free courses, §05</span></td></tr>
+        <tr><td><b>ESG frameworks (BRSR, GHG Protocol, SASB)</b></td><td><span class="pill pill--risk">Gap</span></td><td>Conversational fluency, not mastery</td><td><span class="pill pill--watch">Optional cert only after offer</span></td></tr>
+        <tr><td><b>Personal brand consistency</b></td><td><span class="pill pill--risk">4 conflicting positionings</span></td><td>One positioning everywhere</td><td><span class="pill pill--go">§07 + §10, this week</span></td></tr>
+      </table>
+    </div>
+  </section>
 
-<footer>
-  <div class="wrap">
-    <span>FIG. 1–4 · Curriculum compiled by four sequential drafting agents</span>
-    <span>All external links verified at time of writing — re-check before relying on them long-term</span>
-  </div>
+  <!-- 05 COURSES -->
+  <section class="panel" id="courses">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">05</span> Courses &amp; certifications</div>
+        <h2>Ranked by ROI for job-search speed</h2>
+        <p>Free/fast items are the priority. The three big global certs are respected but not prerequisites — real fresher postings accept 0–2 YOE without them.</p>
+      </div>
+    </div>
+    <div class="grid cols-3">
+      <div class="course-card reveal">
+        <div class="top"><h4>Career Essentials in Sustainable Tech</h4><span class="pill pill--go">Do first</span></div>
+        <div class="meta"><span>Microsoft + LinkedIn</span><span>Free*</span><span>~4 hrs</span></div>
+        <p>6 short courses incl. "An Introduction to AI and Sustainability." Fastest possible resume + LinkedIn credential.</p>
+        <a class="btn" href="https://www.linkedin.com/learning/paths/career-essentials-in-sustainable-tech-by-microsoft-and-linkedin" target="_blank" rel="noopener">Start course →</a>
+      </div>
+      <div class="course-card reveal">
+        <div class="top"><h4>AI and Sustainability: Leading Responsibly</h4><span class="pill pill--go">Do first</span></div>
+        <div class="meta"><span>Oxford Saïd / Coursera</span><span>Free to audit</span><span>Self-paced</span></div>
+        <p>Prestigious-university framing of both "AI for sustainability" and "sustainable AI" — directly names your two lanes.</p>
+        <a class="btn" href="https://www.coursera.org/learn/ai-sustainability-leading-responsibly" target="_blank" rel="noopener">Enroll free →</a>
+      </div>
+      <div class="course-card reveal">
+        <div class="top"><h4>AWS Certified Cloud Practitioner</h4><span class="pill pill--go">Do first</span></div>
+        <div class="meta"><span>AWS / Pearson VUE</span><span>$100 (~₹9,800)</span><span>~2 wks prep</span></div>
+        <p>Resolves the ambiguous "AWS Cloud Practitioner" claim on your LinkedIn — you already have the hands-on hours from 3 internships.</p>
+        <a class="btn outline" href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener">Exam details →</a>
+      </div>
+      <div class="course-card reveal">
+        <div class="top"><h4>Microsoft for Sustainability training</h4><span class="pill pill--watch">Should do</span></div>
+        <div class="meta"><span>Microsoft Learn</span><span>Free</span><span>Self-paced</span></div>
+        <p>Covers Microsoft Cloud for Sustainability / Sustainability Manager — useful vocabulary for enterprise ESG software roles.</p>
+        <a class="btn outline" href="https://learn.microsoft.com/en-us/training/industry/sustainability" target="_blank" rel="noopener">View path →</a>
+      </div>
+      <div class="course-card tier-optional reveal">
+        <div class="top"><h4>GARP SCR Certificate</h4><span class="pill pill--watch">Optional / stretch</span></div>
+        <div class="meta"><span>GARP</span><span>$575 early-reg (~₹55,500)</span><span>1 exam, 4 hrs</span></div>
+        <p>Best cost/speed tradeoff of the three global certs. Climate-risk focus — fits Path 2 (carbon/climate-tech) best. No prerequisites.</p>
+        <a class="btn outline" href="https://www.garp.org/scr" target="_blank" rel="noopener">Program details →</a>
+      </div>
+      <div class="course-card tier-optional reveal">
+        <div class="top"><h4>CFA Sustainable Investing Certificate</h4><span class="pill pill--watch">Optional / stretch</span></div>
+        <div class="meta"><span>CFA Institute</span><span>~$865–890 (~₹84–86k)</span><span>100–130 hrs</span></div>
+        <p>Formerly "Certificate in ESG Investing." Best fit if targeting investment/ratings-agency ESG roles (e.g. ISS ESG). No prerequisites.</p>
+        <a class="btn outline" href="https://www.cfainstitute.org/programs/sustainable-investing-certificate/exam-info" target="_blank" rel="noopener">Exam info →</a>
+      </div>
+      <div class="course-card tier-optional reveal">
+        <div class="top"><h4>IFRS FSA Credential (SASB)</h4><span class="pill pill--risk">After an offer</span></div>
+        <div class="meta"><span>IFRS Foundation</span><span>~$900–1,100 total</span><span>2 exams, 30–50 hrs each</span></div>
+        <p>Most rigorous and most expensive of the three. Pursue only post-offer, ideally employer-funded — not a 30–60 day priority.</p>
+        <a class="btn outline" href="https://www.pearsonvue.com/us/en/ifrs.html" target="_blank" rel="noopener">Registration →</a>
+      </div>
+    </div>
+    <p style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-top:16px;">*"Free" via the Microsoft/LinkedIn Skills-for-Jobs promotion at time of writing — confirm at checkout in case it has changed. All costs approximate (USD→INR at ~₹96.5/USD) and change over time — verify on the provider's site before paying.</p>
+  </section>
+
+  <!-- 06 PROJECTS -->
+  <section class="panel" id="projects">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">06</span> Existing project map</div>
+        <h2>Reframe what exists — build nothing new</h2>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Project</th><th>Action</th><th>New framing</th></tr>
+        <tr>
+          <td><b>Vriksha Raksha · Plant Disease CNN · Crop &amp; Fertilizer Rec.</b></td>
+          <td><span class="pill pill--go">Keep — feature first</span></td>
+          <td>Climate-smart agriculture AI; fertilizer recommendation = input-optimization, a real sustainability metric</td>
+        </tr>
+        <tr>
+          <td><b>Farmer-Friend AI Assistant</b></td>
+          <td><span class="pill pill--go">Add to profile.json</span></td>
+          <td>Currently CV-only — missing from your primary evidence source. Same AgriTech lane.</td>
+        </tr>
+        <tr>
+          <td><b>Financial Intent Routing Architecture</b></td>
+          <td><span class="pill pill--risk">Rewrite bullet + add to profile.json</span></td>
+          <td>Flagship Green/Efficient-AI evidence — currently undersold as "data collection &amp; documentation." See §10 for the full fix.</td>
+        </tr>
+        <tr>
+          <td><b>DocSummarizer · Askademia · Deep Research Assistant</b></td>
+          <td><span class="pill pill--watch">Reframe only</span></td>
+          <td>ESG/BRSR report parsing &amp; compliance-document automation</td>
+        </tr>
+        <tr>
+          <td><b>n8n workflows (Ardent Computech)</b></td>
+          <td><span class="pill pill--watch">Reframe only</span></td>
+          <td>ESG/BRSR <em>data-collection automation</em> — the #1 gap flagged in BRSR-readiness research is manual data collection</td>
+        </tr>
+        <tr>
+          <td><b>QR Forge, Hiring Nexus, URL Scanner, SEO agent, IntelliDebug, Algo Trading, Posture Police, InterviewGPT, Netflix/Airbnb EDA</b></td>
+          <td><span class="pill pill--info">De-emphasize</span></td>
+          <td>Keep on GitHub for breadth; don't lead with these on the sustainability-track resume variant</td>
+        </tr>
+        <tr>
+          <td><b>Any brand-new project</b></td>
+          <td><span class="pill pill--risk">Don't build</span></td>
+          <td>Reframing existing work is faster and equally credible inside a 30–60 day window</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 07 LINKEDIN -->
+  <section class="panel" id="linkedin">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">07</span> LinkedIn rewrite plan</div>
+        <h2>Discoverable for the right searches, without overclaiming</h2>
+        <p>Headline and Skills carry the most weight in recruiter search — keyword-matched profiles get roughly 3x more recruiter messages.</p>
+      </div>
+    </div>
+    <div class="grid cols-2">
+      <div>
+        <h4 style="font-size:14px;color:var(--ink);margin-bottom:12px;">Headline options</h4>
+        <div class="headline-opt"><span class="tag">Option 1</span>AI/ML Engineer → Sustainability Data &amp; ESG Technology | Python · RAG/LLM · AWS | BRSR &amp; ESG Reporting Automation</div>
+        <div class="headline-opt"><span class="tag">Option 2</span>Applied AI Engineer | Climate-Smart Agriculture AI + ESG Data Systems | Computer Vision · NLP · AWS · GenAI</div>
+        <div class="headline-opt"><span class="tag">Option 3</span>B.Tech CSE (AI &amp; ML) '26 | Sustainability Analytics &amp; Efficient AI | 15+ Shipped Projects | Open to Work</div>
+
+        <h4 style="font-size:14px;color:var(--ink);margin:22px 0 12px;">Keyword bank</h4>
+        <div class="tagcloud">
+          <span>ESG</span><span>ESG Analyst</span><span>Sustainability Analyst</span><span>Sustainability Reporting</span>
+          <span>BRSR</span><span>Climate Tech</span><span>Climate Risk</span><span>Carbon Accounting</span>
+          <span>Green AI</span><span>Responsible AI</span><span>Python</span><span>SQL</span>
+          <span>TensorFlow</span><span>Computer Vision</span><span>NLP</span><span>LangChain</span>
+          <span>RAG</span><span>LLM</span><span>Gemini API</span><span>AWS</span>
+          <span>Workflow Automation</span><span>n8n</span><span>Flask</span><span>Streamlit</span>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:14px;color:var(--ink);margin-bottom:12px;">About section (rewrite)</h4>
+        <div class="about-box">
+          <p>I turn messy, real-world data into systems that make decisions — and I'm focused on doing that for sustainability and ESG teams.</p>
+          <p>In 1.5+ years across five internships (AI/ML, cloud, data analytics) I've shipped 15+ projects end-to-end, including a computer-vision pipeline diagnosing crop and plant disease at 85%+ accuracy across 63,000+ images; a confidence-aware NLP routing system for 13,000+ banking queries that matched a full transformer model's accuracy (92.7% Macro F1) at a fraction of the latency and compute cost, validated with formal statistical testing; and RAG/document-automation pipelines built on LangChain and the Gemini/OpenAI APIs.</p>
+          <p>I'm now applying this to Sustainability Data, ESG Reporting Technology, and Climate-Tech — where India's BRSR mandate and global ESG disclosure rules are creating real demand for people who can automate data collection, build reporting pipelines, and apply efficient, well-validated ML.</p>
+          <p><strong>Open to:</strong> ESG/Sustainability Data Analyst · Climate-Tech AI Engineer · AI/ML Engineer roles.</p>
+        </div>
+        <h4 style="font-size:14px;color:var(--ink);margin:22px 0 12px;">Outreach template</h4>
+        <div class="about-box" style="font-family:var(--mono);font-size:12.5px;">
+          "Hi [Name] — I'm a final-year AI/ML engineer moving into sustainability/ESG data work. I've built crop-disease CV models and RAG-based document automation, and I'm applying that now to ESG reporting and climate-tech. I saw your work at [Company] and would love 15 minutes to hear how you got into [area] and what mattered most early on — happy to work around your schedule. Thanks for considering!"
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 APPLICATIONS -->
+  <section class="panel" id="apply">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">08</span> Application strategy</div>
+        <h2>Where to apply, by tier</h2>
+      </div>
+    </div>
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <span class="pill pill--go">Tier 1 — apply now</span>
+        <p style="margin-top:12px;font-size:14px;color:var(--ink-soft);">ISS ESG / ISS STOXX (Mumbai) · Suntec Web Services (Delhi) · Apex Group (Pune) · Quantum Mutual Fund (Mumbai)</p>
+        <p style="font-size:12.5px;color:var(--ink-faint);margin-top:8px;">Confirmed 0–2 YOE ESG-analyst postings.</p>
+      </div>
+      <div class="card reveal">
+        <span class="pill pill--watch">Tier 2 — best evidence fit</span>
+        <p style="margin-top:12px;font-size:14px;color:var(--ink-soft);">Cropin · Intello Labs · SatSure · Fasal · Varaha (Gurugram) · Boomitra</p>
+        <p style="font-size:12.5px;color:var(--ink-faint);margin-top:8px;">Junior ML/CV roles ₹7–14 LPA at funded agri/climate-tech startups.</p>
+      </div>
+      <div class="card reveal">
+        <span class="pill pill--info">Tier 3 — high-volume funnels</span>
+        <p style="margin-top:12px;font-size:14px;color:var(--ink-soft);">TCS (Digital ESG) · Infosys (EcoWatch) · Wipro Sustainability · Deloitte / EY / KPMG / PwC · IBM (Envizi)</p>
+        <p style="font-size:12.5px;color:var(--ink-faint);margin-top:8px;">Apply to core fresher tracks + the sustainability practice specifically.</p>
+      </div>
+    </div>
+    <div class="grid cols-2" style="margin-top:16px;">
+      <div class="card reveal">
+        <h4 style="font-size:14px;color:var(--ink);margin-bottom:8px;">Job boards to set alerts on</h4>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0;">climatebase.org/jobs (has an early-career filter) · climatechangecareers.com/jobs/india · LinkedIn Jobs (saved search on keyword bank, §07) · Naukri</p>
+      </div>
+      <div class="card reveal">
+        <h4 style="font-size:14px;color:var(--ink);margin-bottom:8px;">Weekly targets</h4>
+        <p style="font-size:14px;color:var(--ink-soft);margin:0;">10–15 applications/week · 1–2 networking messages/day · 1 follow-up pass every Friday on anything &gt;5 days old</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 TODAY -->
+  <section class="panel" id="today">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">09</span> What to do today</div>
+        <h2>Day 1 checklist</h2>
+        <p>Tap to check off. (Resets on reload — copy your progress into a tracker if you want it to persist.)</p>
+      </div>
+    </div>
+    <div class="checklist" id="checklist">
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Pick one positioning (Option 1, 2, or 3 in §07) and use it everywhere today</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Fix the CGPA figure and standardize your email across all documents (§10)</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Add Financial Intent Routing Architecture + Farmer-Friend to profile.json / portfolio</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Rewrite the Financial Intent Routing resume bullet (§06 / §10)</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Enroll in "Career Essentials in Sustainable Tech" (§05) — start today, ~4 hrs total</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Rewrite LinkedIn headline + About section (§07)</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Reorder LinkedIn Top Skills: Python, Machine Learning, AWS/GenAI first</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Apply to 3 Tier-1 or Tier-2 roles (§08)</span></div>
+      <div class="chk-item"><span class="chk-box"></span><span class="label">Set job alerts on climatebase.org and LinkedIn using the keyword bank (§07)</span></div>
+    </div>
+  </section>
+
+  <!-- 10 RISKS -->
+  <section class="panel" id="risks">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">10</span> Verification, risks &amp; warnings</div>
+        <h2>What the audit caught across your documents</h2>
+      </div>
+    </div>
+    <div class="grid cols-2">
+      <div class="alert risk reveal"><span class="mark">FIX</span><p><strong>Four conflicting positionings</strong> across profile.json ("Business Analyst and AI Strategist"), CV1 ("AI Engineer and Data Strategist"), CV3 ("Software Engineer"), and LinkedIn ("Applied AI/ML Developer"). Standardize to one everywhere — this is the single highest-leverage fix.</p></div>
+      <div class="alert watch reveal"><span class="mark">FIX</span><p><strong>CGPA mismatch:</strong> 8.35 (profile.json, CV3) vs. 8.38 (CV1). Confirm the correct figure and use it consistently.</p></div>
+      <div class="alert risk reveal"><span class="mark">FIX</span><p><strong>LinkedIn About tone is a real liability</strong> for conservative ESG/finance-adjacent recruiters ("You do not have any idea how high I can fly"). Full rewrite in §07.</p></div>
+      <div class="alert risk reveal"><span class="mark">FIX</span><p><strong>LinkedIn Top Skills</strong> currently show n8n, Data Analysis, Time Series Analysis — none of Python/ML/AWS. This is what recruiter Boolean search actually scans. Reorder now.</p></div>
+      <div class="alert watch reveal"><span class="mark">FIX</span><p><strong>Contact email inconsistent</strong> — rediffmail on LinkedIn vs. gmail everywhere else. Pick one.</p></div>
+      <div class="alert risk reveal"><span class="mark">FIX</span><p><strong>Two real projects are missing from profile.json</strong> (Financial Intent Routing, Farmer-Friend) — present only in individual CVs. If profile.json feeds your portfolio site, it's currently your weakest evidence source.</p></div>
+      <div class="alert risk reveal"><span class="mark">FIX</span><p><strong>Financial Intent Routing bullet undersells the work.</strong> The underlying paper shows a cascading CNN+DistilBERT router hitting 92.73% Macro F1 — edging out standalone DistilBERT's 92.60% — at materially lower latency, validated with McNemar's test, bootstrap confidence intervals, and Integrated Gradients explainability. None of that appears in the current bullet. This is your best differentiator and it's invisible.</p></div>
+      <div class="alert watch reveal"><span class="mark">CHECK</span><p><strong>"AWS Cloud Practitioner" status is ambiguous</strong> — listed as both a job title and a "Certification" with no credential ID anywhere. Clarify; if it isn't the real CLF-C02 exam, sit it (§05) — cheap and fast given your hands-on AWS hours.</p></div>
+      <div class="alert watch reveal"><span class="mark">CHECK</span><p><strong>Certification lists differ</strong> between LinkedIn (5 items incl. "Data Integration Expert") and CV3 (5 different items). Consolidate into one master list.</p></div>
+      <div class="alert watch reveal"><span class="mark">VERIFIED</span><p>Your <strong>"13,000+ retail banking queries"</strong> claim checks out — the underlying paper reports 8,993 train + 1,000 val + 3,076 test = 13,069 total. No fix needed.</p></div>
+    </div>
+  </section>
+
+  <!-- 11 SUMMARY -->
+  <section class="panel" id="summary" style="border-bottom:none;">
+    <div class="head">
+      <div>
+        <div class="eyebrow"><span class="num">11</span> Final recommendation</div>
+        <h2>The one-paragraph version</h2>
+      </div>
+    </div>
+    <div class="summary-card reveal">
+      <h3>Don't wait to be "ESG-qualified." Reframe, then apply — today.</h3>
+      <ol>
+        <li>Fix the consistency issues (§10) and reframe your existing projects (§06) — this takes days, not weeks, and needs zero new work.</li>
+        <li>Run two lanes in parallel: <strong>ESG Data &amp; Reporting</strong> (highest volume) and <strong>Climate-Tech/AgriTech AI</strong> (your strongest evidence) — apply to both from Week 1.</li>
+        <li>Spend on learning in the order in §05: free and fast first; the big global certs are optional signal boosters for later, never a gate on applying.</li>
+        <li>Your differentiator isn't a certificate — it's the routing-cascade paper, reframed as Green/Efficient-AI evidence most fresher applicants simply don't have.</li>
+        <li>If Paths 1–2 haven't produced 3 interviews by Day 45, widen to general AI/ML fresher roles in parallel, without dropping the sustainability push.</li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>Built from your uploaded CVs, profile.json, and the routing-cascade paper, cross-checked against live job postings and certification-provider pages as of July 2026. Job listings, exact costs, and program names change — verify on the source before applying or paying. Company names are target profiles based on current hiring patterns, not guaranteed open requisitions.</p>
 </footer>
 
 <script>
-// ---------------- DATA ----------------
-const modules = [
-  {
-    id:0, num:"MOD 0", title:"Foundational Literacy (Prerequisite Layer)",
-    subs:[
-      {
-        tag:"0.1", title:"Anatomy of a Patent Document",
-        topics:["Specification & drawings","Independent vs. dependent claims","Abstract & title conventions"],
-        q:"Given only a product's marketing page, could you tell which sections of a real patent on that product are load-bearing vs. boilerplate?",
-        a:"Pull one issued U.S. patent (via Patent Public Search or Google Patents) in a domain you know well. Label every paragraph of the specification as either 'supports a claim term' or 'background/context.' Then map each independent claim's elements back to the exact sentence in the spec that supports them."
-      },
-      {
-        tag:"0.2", title:"The Legal Tests Behind Claim Scope",
-        topics:["Novelty (§102)","Non-obviousness (§103)","Enablement & written description (§112)","Subject-matter eligibility (§101)"],
-        q:"Why do four separate legal tests all converge on the same 20–30 words of claim language?",
-        a:"Take one independent claim from the patent you chose above. Write a one-paragraph analysis for each of §101, §102, §103, and §112 explaining what would have to be true in the prior art (or the spec) for that claim to fail each test."
-      },
-      {
-        tag:"0.3", title:"Global Filing Fundamentals",
-        topics:["Paris Convention priority","PCT national phase","First-to-file mechanics"],
-        q:"If you file in the U.S. today, what is the absolute latest date you could still claim priority in the EU and China — and what changes if you file via PCT instead of directly?",
-        a:"Build a one-page filing-strategy timeline (Gantt-style, can be hand-drawn) for a hypothetical AI-agent invention: U.S. provisional → 12-month Paris deadline → PCT filing → 30/31-month national phase entries in EPO, CNIPA, JPO. Mark every deadline."
-      }
-    ]
-  },
-  {
-    id:1, num:"MOD 1", title:"Basic Claim Drafting",
-    subs:[
-      {
-        tag:"1.1", title:"Claim Grammar & Structure",
-        topics:["Preamble","Transitional phrase (comprising / consisting of)","Body & antecedent basis rules"],
-        q:"What is the practical difference in claim scope between 'comprising' and 'consisting of' — and which would you choose for a claim you intend to license broadly?",
-        a:"Write one independent apparatus claim (120–180 words) for a household object of your choosing, correctly using preamble, a properly chosen transitional phrase, and a body with clean antecedent basis (every 'the X' has a prior 'a X'). Have it reviewed against MPEP §2111 checklist items."
-      },
-      {
-        tag:"1.2", title:"Claim Categories",
-        topics:["System/apparatus claims","Method/process claims","Means-plus-function claims (§112(f))","Computer-readable medium (Beauregard) claims"],
-        q:"For a single AI feature (e.g., a retrieval-augmented answer pipeline), which claim category gives you the strongest infringement position against a single company vs. a multi-party deployment?",
-        a:"Draft the SAME invention four ways — once each as a system claim, a method claim, a means-plus-function claim, and a CRM/Beauregard claim. Write a short memo ranking them by enforceability and by ease of examination."
-      },
-      {
-        tag:"1.3", title:"Translating System Architecture into Independent Claims",
-        topics:["Decomposing an architecture diagram into claim elements","Selecting the broadest supportable claim category"],
-        q:"Which boxes in a system architecture diagram are claim-worthy 'elements,' and which are just implementation detail that would narrow you unnecessarily?",
-        a:"Take a real or hypothetical multi-modal AI agent architecture (input encoder → planner → tool-router → executor → output). Draw the block diagram, then draft ONE broad independent system claim and ONE broad independent method claim directly from it, element by element."
-      },
-      {
-        tag:"1.4", title:"Building the Dependent Claim Tree",
-        topics:["Progressive narrowing strategy","Fallback positions for examination"],
-        q:"If an examiner rejects your broadest claim over one piece of prior art, which of your dependent claims should survive untouched — and did you design it that way on purpose?",
-        a:"From the independent claim you drafted in 1.3, write 6 dependent claims: 3 narrowing on technical detail (fallback if rejected on novelty) and 3 narrowing on a commercially distinct embodiment (fallback for licensing flexibility). Label which is which."
-      }
-    ]
-  },
-  {
-    id:2, num:"MOD 2", title:"Intermediate Claim Scope Engineering",
-    subs:[
-      {
-        tag:"2.1", title:"Breadth vs. Defensibility Trade-offs",
-        topics:["Genus-species claiming","Functional claiming & indefiniteness risk (Nautilus)"],
-        q:"At what point does a functional limitation ('a module configured to...') become so vague it risks an indefiniteness rejection instead of buying you broader scope?",
-        a:"Take one claim element from your Module 1 capstone claim and rewrite it three ways: (1) purely structural, (2) purely functional, (3) functional-with-structural-backup ('configured to X by performing Y'). Argue which version you'd actually file and why."
-      },
-      {
-        tag:"2.2", title:"Claiming Distributed & Multi-Party Systems",
-        topics:["Client-server-cloud claim boundaries","Divided infringement (Akamai doctrine)"],
-        q:"If your claim requires steps performed partly by a user's device and partly by your server, who is 'the infringer' — and how does that risk change your drafting?",
-        a:"Redraft your Module 1 method claim so that every step is performed by a SINGLE entity (your server), eliminating any user-side or third-party-side steps. Write a short note on what scope you gave up to avoid a divided-infringement problem."
-      },
-      {
-        tag:"2.3", title:"Claiming AI/ML Architectures & Trade Secret Boundaries",
-        topics:["Architecture claims vs. training-method claims vs. application/output claims","§101 practical-application framing (2024 USPTO AI guidance)","Trade Secret Election for AI Weights & Data Pipelines (Detectability vs. Disclosure)"],
-        q:"Under the USPTO's 2024 AI eligibility update, what turns an abstract 'training a model' claim into an eligible 'practical application' claim, and when should you withhold model weights as a trade secret instead?",
-        a:"Pick a machine-learning technique. Draft three separate independent claims — one to model architecture, one to training method, one to a specific practical application. For the application claim, add bounded field of use, technical improvement, and non-mental-step limitations. Then write a 1-page memo analyzing whether model weights should be claimed or kept secret based on infringement detectability."
-      },
-      {
-        tag:"2.4", title:"Claim Charts & Element Mapping",
-        topics:["Element-by-element mapping for FTO / infringement alignment"],
-        q:"Can you map every single word of your own claim onto a real competitor product feature-by-feature, with no gaps?",
-        a:"Choose a real, publicly documented product feature (any company). Build a two-column claim chart: your Module 1 independent claim's elements on the left, the exact product feature/documentation quote on the right for each. Flag any element that does NOT map cleanly — that's your gap."
-      }
-    ]
-  },
-  {
-    id:3, num:"MOD 3", title:"Advanced Portfolio-Level Strategy",
-    subs:[
-      {
-        tag:"3.1", title:"Claim Families & Continuation Strategy",
-        topics:["Continuations, CIPs, divisionals","Picture-claim vs. broad-claim sequencing"],
-        q:"If you knew a competitor would design around your first patent within 18 months, how would you sequence your continuation filings to stay ahead of them?",
-        a:"Design a 3-generation filing plan on paper: Patent A (broad independent claim, filed now), Continuation B (narrower claim targeting a specific likely competitor implementation, filed 12 months later), Continuation C (claim targeting a design-around you anticipate). Justify the sequencing."
-      },
-      {
-        tag:"3.2", title:"Drafting With Design-Arounds in Mind",
-        topics:["Anticipating and narrowing competitor design-around space in the original claim"],
-        q:"What is the most obvious way a competitor could remove ONE word from your claim's element list and escape infringement — and can you close that gap now?",
-        a:"Take your Module 1 independent claim. Play 'red team': list 3 minimal design-around modifications a competitor could make. For each, draft a dependent (or alternative independent) claim that would still catch that design-around."
-      },
-      {
-        tag:"3.3", title:"Litigation-Aware Drafting",
-        topics:["Prosecution history estoppel","Claim construction risk (Phillips framework)","Preserving doctrine of equivalents"],
-        q:"If you narrow a claim during prosecution to overcome a rejection, what have you permanently given up — and could you have avoided giving it up with a different claim structure?",
-        a:"Read one Patently-O post on a recent claim-construction dispute. Write a half-page memo: what argument did the patent owner make about a term's meaning, what did the court decide, and what would you have drafted differently at filing time to avoid the dispute entirely."
-      },
-      {
-        tag:"3.4", title:"Standard-Essential & Interoperability Claiming",
-        topics:["Drafting claims likely to read on an industry standard","FRAND-aware claim scope"],
-        q:"If your claim is later declared essential to a technical standard, what obligations follow — and should that change how broadly you draft it today?",
-        a:"Pick a real technical standard relevant to your field (e.g., a codec, a model-interoperability spec, a wireless protocol). Draft one independent claim designed to plausibly read on a mandatory element of that standard, and write a short FRAND-exposure risk note."
-      }
-    ]
-  },
-  {
-    id:4, num:"MOD 4", title:"Expert / Business-Integrated Strategy",
-    subs:[
-      {
-        tag:"4.1", title:"Claims as Business Assets",
-        topics:["Aligning claim scope with product roadmap & monetization plan"],
-        q:"Should your broadest claim protect the product you're shipping today, or the product on your 3-year roadmap — and can one claim set do both?",
-        a:"Write a one-page IP strategy memo for a hypothetical startup's next 3 product releases: which release gets a new independent claim, which gets only a dependent claim, and which is protected by trade secret instead. Justify each call in one sentence."
-      },
-      {
-        tag:"4.2", title:"Cross-Jurisdictional Claim Harmonization",
-        topics:["USPTO vs. EPO vs. CNIPA vs. JPO claim-style differences"],
-        q:"Why might a claim that issues cleanly at the USPTO get a unity-of-invention or added-matter objection at the EPO?",
-        a:"Take your Module 1 independent claim and rewrite it in 'EPO style' (two-part form: preamble + characterizing portion introduced by 'characterized in that'). Note the two biggest substantive differences from the U.S. version."
-      },
-      {
-        tag:"4.3", title:"AI-Assisted Drafting Oversight & Programmatic QA",
-        topics:["Auditing AI-drafted claims for §112 compliance and antecedent errors","Using AI for claim-variant generation while retaining strategic authorship","Programmatic Claim Linting for §112 & Antecedent Basis Verification"],
-        q:"If an AI tool drafts 10 claim variants in seconds, what is the one thing it structurally cannot do that you, as the strategist, must still do yourself?",
-        a:"Generate 5 AI-drafted claim variants for an invention using an LLM. Write a short Python script or regular expression tool to lint the claims for missing antecedent basis (flags 'the X' without prior 'an X'). Audit all 5 against your linter output and rank them by strategic strength."
-      },
-      {
-        tag:"4.4", title:"Capstone — Full Claim Set for a Multi-Modal Agentic AI System",
-        topics:["Independent claims across system / method / CRM categories","Dependent tree with FTO-aware and SEP-aware branches"],
-        q:"Could a competitor, a licensing partner, and a hostile examiner all read your capstone claim set and reach three different conclusions about what it actually covers?",
-        a:"Produce a complete claim set (12–20 claims) for a hypothetical multi-modal agentic AI system of your own design: 3 independent claims (system, method, CRM), a dependent tree with at least one design-around-blocking claim, one FTO-conscious narrow fallback, and one claim drafted to plausibly read on an interoperability standard. Attach a 1-page prosecution strategy memo."
-      }
-    ]
-  }
-];
+  // reveal on scroll
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-const hub = [
-  {kind:"Patent Database", title:"USPTO Patent Public Search", desc:"Free full-text search over all U.S. patents and published applications — the same interface examiners use.", url:"https://www.uspto.gov/patents/search/patent-public-search"},
-  {kind:"Patent Database", title:"Google Patents", desc:"Fast full-text search and citation graphs across global patent literature.", url:"https://patents.google.com/"},
-  {kind:"Patent Database", title:"Espacenet (EPO)", desc:"140M+ patent documents worldwide; best for comparing EPO claim style to USPTO.", url:"https://worldwide.espacenet.com/"},
-  {kind:"Patent Database", title:"WIPO PATENTSCOPE", desc:"Free search across PCT international applications and national collections.", url:"https://patentscope.wipo.int/"},
-  {kind:"Analytics", title:"Lens.org", desc:"Free, open patent + scholarly-literature analytics platform for landscape and whitespace mining.", url:"https://www.lens.org/"},
-  {kind:"Analytics", title:"PatentsView", desc:"USPTO-built visualization & bulk-data platform for patent analysis.", url:"https://patentsview.org/"},
-  {kind:"News & Commentary", title:"Patently-O", desc:"The leading U.S. patent-law blog — Federal Circuit case commentary, claim-construction disputes.", url:"https://patentlyo.com/"},
-  {kind:"News & Commentary", title:"IPWatchdog", desc:"Daily patent, trademark, and policy news with practitioner and judicial commentary.", url:"https://ipwatchdog.com/"},
-  {kind:"Free Courses", title:"WIPO Academy — IP eLearning", desc:"Free, self-paced courses from beginner (DL‑101) to advanced patent drafting (DL‑320).", url:"https://www.wipo.int/en/web/wipo-academy/programs/ip-elearning/index"},
-  {kind:"Free Courses", title:"WIPO International Patent Drafting Training Program", desc:"WIPO/FICPI hands-on drafting program with a distance-learning phase and Geneva workshop.", url:"https://www.wipo.int/en/web/patent-drafting/training-program"},
-  {kind:"Professional Body", title:"LES USA & Canada", desc:"Leading licensing & IP-monetization professional society — events, standards, deal benchmarks.", url:"https://www.lesusacanada.org/"},
-  {kind:"Professional Body", title:"LES International", desc:"Global federation of licensing societies — cross-border deal and standards community.", url:"https://lesi.org/"},
-  {kind:"Official Guidance", title:"USPTO — Subject Matter Eligibility Hub", desc:"Live index of §101 guidance, including the 2024 AI Subject-Matter-Eligibility Update and Examples 47–49.", url:"https://www.uspto.gov/ip-policy/patent-policy/patent-subject-matter-eligibility"},
-  {kind:"Official Guidance", title:"MPEP — Manual of Patent Examining Procedure", desc:"The examiner's own rulebook — the ground truth for how claims are actually read at the USPTO.", url:"https://www.uspto.gov/web/offices/pac/mpep/index.html"}
-];
-
-// ---------------- RENDER ----------------
-function renderStructure(){
-  const el = document.getElementById('structure-modules');
-  el.innerHTML = modules.map((m,i)=>`
-    <div class="module ${i===0?'open':''}" data-mod="${m.id}">
-      <div class="module-head" onclick="toggleModule(this)">
-        <span class="mnum">${m.num}</span>
-        <h4>${m.title}</h4>
-        <span class="chev">▸</span>
-      </div>
-      <div class="module-body">
-        ${m.subs.map(s=>`
-          <div class="subhead">
-            <h5><span class="tag">${s.tag}</span>${s.title}</h5>
-            <ul class="subtopics">${s.topics.map(t=>`<li>${t}</li>`).join('')}</ul>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderAssignments(){
-  const el = document.getElementById('assignment-modules');
-  el.innerHTML = modules.map((m,i)=>`
-    <div class="module ${i===0?'open':''}" data-mod="a${m.id}">
-      <div class="module-head" onclick="toggleModule(this)">
-        <span class="mnum">${m.num}</span>
-        <h4>${m.title}</h4>
-        <span class="chev">▸</span>
-      </div>
-      <div class="module-body">
-        ${m.subs.map(s=>`
-          <div class="subhead">
-            <h5><span class="tag">${s.tag}</span>${s.title}</h5>
-            <div class="assignment-box">
-              <div class="q">Analytical question</div>
-              <p>${s.q}</p>
-              <div class="a-label">Hands-on assignment</div>
-              <p>${s.a}</p>
-            </div>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderHub(){
-  const el = document.getElementById('hub-grid');
-  el.innerHTML = hub.map(h=>`
-    <div class="hub-card">
-      <span class="kind">${h.kind}</span>
-      <h5>${h.title}</h5>
-      <p>${h.desc}</p>
-      <a class="visit" href="${h.url}" target="_blank">Visit ↗</a>
-    </div>
-  `).join('');
-}
-
-window.toggleModule = function(headEl){
-  const mod = headEl.parentElement;
-  const body = mod.querySelector('.module-body');
-  const willOpen = !mod.classList.contains('open');
-  mod.classList.toggle('open');
-  body.style.maxHeight = willOpen ? body.scrollHeight + 'px' : '0px';
-};
-
-// tabs
-document.querySelectorAll('.tab-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+  // checklist toggle (in-memory only)
+  document.querySelectorAll('.chk-item').forEach(item=>{
+    item.addEventListener('click', ()=> item.classList.toggle('done'));
   });
-});
 
-renderStructure();
-renderAssignments();
-renderHub();
-
-// open first module bodies by default (after render, so scrollHeight is measurable)
-setTimeout(()=>{
-  document.querySelectorAll('.module.open .module-body').forEach(b=>{
-    b.style.maxHeight = b.scrollHeight + 'px';
-  });
-},50);
+  // nav active highlight
+  const navLinks = document.querySelectorAll('.navlinks a');
+  const sections = document.querySelectorAll('section.panel');
+  const navObs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        navLinks.forEach(l=>l.style.color='');
+        const active = document.querySelector('.navlinks a[href="#'+entry.target.id+'"]');
+        if(active){ active.style.color = 'var(--ink)'; active.style.background='var(--panel-2)'; }
+      }
+    });
+  }, {rootMargin:'-40% 0px -50% 0px'});
+  sections.forEach(s=>navObs.observe(s));
 </script>
+
 </body>
 </html>
